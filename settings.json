@@ -1,0 +1,8 @@
+{
+ "galaxy.meteor.com": { 
+   "env": { 
+     "ROOT_URL": "https://carapply.meteorapp.com", 
+     "MONGO_URL": "mongodb://wjy4528:960918@ds135522.mlab.com:35522/wjy4528" 
+     } 
+  }
+}

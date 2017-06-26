@@ -1,0 +1,12 @@
+<template name="postItem">
+  <div class="post">
+    <div class="post-content">
+      <h3>{{person_name}}<span></span></h3>
+       <p>
+        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
+      </p>
+    </div>
+    <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">详细资料</a>
+  </div>
+</template>
+

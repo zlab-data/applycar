@@ -1,12 +1,24 @@
 <template name="postPage">
+  <div><p style="font-size:30px; margin-left: 37%"><strong>个人车辆融资租赁申请表</strong></p></div>
   
-  <img src="{{c.url getId}}" style="height:200px; width: 160px">
-  <div><strong>姓名：</strong><p>{{person_name}}</p></div>
-  <p>生日：{{person_birthday}}</p>
-  <p>性别：{{person_gender}}</p>
-  <p>证件类型：{{person_id_type}}</p>
-  <p>证件号码：{{person_id}}</p>
-  <p>发证机关：{{person_id_issuer}}</p>
+  <div><p><strong>本人正脸相片：</strong></p></div>
+  <img src="{{c.url get_front_image}}" style="height:200px; width: 160px">
+
+  <div><p><strong>本人侧脸相片：</strong></p></div>
+  <img src="{{c.url get_side_image}}" style="height:200px; width: 160px">
+
+  <div><p><strong>本人手持身份证相片：</strong></p></div>
+  <img src="{{c.url get_hold_image}}" style="height:200px; width: 160px">
+
+
+  <div><p><strong>姓名：</strong>{{person_name}}</p></div>
+  <p><strong>生日：</strong>{{person_birthday}}</p>
+  <p><strong>性别：</strong>{{person_gender}}</p>
+  <p><strong>证件类型：</strong>{{person_id_type}}</p>
+  <p><strong>证件号码：</strong>{{person_id}}</p>
+  <p><strong>发证机关：</strong>{{person_id_issuer}}</p>
+  
+  <p><strong>同住老人患有以下疾病：</strong>{{parent_disease}}</p>
 
 
 

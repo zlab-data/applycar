@@ -8,8 +8,17 @@ Meteor.startup(() => {
  		api_secret: 'twiBkq48MujSH08yJ_HEli3SxhI',
  	}),
  	Accounts.config({
-  			forbidClientAccountCreation: true
-	});
+    	forbidClientAccountCreation: true
+	})
+
+	//Accounts.createUser({
+     //                       username: 'admin',
+     //                       password : 'iamadministrator123',
+     //                      profile  : {
+     //                           //publicly visible fields like firstname goes here
+     //                       }
+   // });
+ 	
 
 
 });

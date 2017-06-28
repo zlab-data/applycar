@@ -4,11 +4,14 @@ Template.postSubmit.events({
     
     var date = new Date();
     var begun = moment(date).format("YYYY.MM.DD.hh.mm.ss");
+    //done by justin
     var parent_disease=[];
     var child_disease=[];
     var person_insurance=[];
     var spouse_insurance=[];
     var person_read_reply=[];
+    var user_disease=[];
+    var spouse_disease=[];
     $("input:checkbox[name=child_disease]:checked").each(function(){
         parent_disease.push($(this).val());
     });
@@ -24,18 +27,29 @@ Template.postSubmit.events({
      $("input:checkbox[name=person_read_reply]:checked").each(function(){
         person_read_reply.push($(this).val());
     });
+     $("input:checkbox[name=user_disease]:checked").each(function(){
+        user_disease.push($(this).val());
+    });
+
+     $("input:checkbox[name=spouse_disease]:checked").each(function(){
+        spouse_disease.push($(this).val());
+    });
+     //done by justin
+
 
 
 
     var post = {
+
+
       //done by justin
       parent_disease:parent_disease,
       child_disease:child_disease,
       person_insurance:person_insurance,
       spouse_insurance:spouse_insurance,
       person_read_reply:person_read_reply,
-
-      
+      spouse_disease:spouse_disease,
+      user_disease:user_disease,
       person_debit1_bank:$(e.target).find('[name=person_debit1_bank]').val(),
       person_debit1_num:$(e.target).find('[name=person_debit1_num]').val(),
       person_debit2_bank:$(e.target).find('[name=person_debit2_bank]').val(),
@@ -48,6 +62,44 @@ Template.postSubmit.events({
       spouse_debit2_num:$(e.target).find('[name=spouse_debit2_num]').val(),
       spouse_debit3_bank:$(e.target).find('[name=spouse_debit3_bank]').val(),
       spouse_debit3_num:$(e.target).find('[name=spouse_debit3_num]').val(),
+      parent_1_name:$(e.target).find('[name=parent_1_name]').val(),
+      parent_1_birthday:$(e.target).find('[name=parent_1_birthday]').val(),
+      parent_1_relation:$(e.target).find('[name=spouse_debit3_num]').val(),
+      parent_2_name:$(e.target).find('[name=parent_2_name]').val(),
+      parent_2_birthday:$(e.target).find('[name=parent_2_birthday]').val(),
+      parent_2_relation:$(e.target).find('[name=parent_2_relation]').val(),
+      parent_3_name:$(e.target).find('[name=parent_3_name]').val(),
+      parent_3_birthday:$(e.target).find('[name=parent_3_birthday]').val(),
+      parent_3_relation:$(e.target).find('[name=parent_3_relation]').val(),
+      parent_4_name:$(e.target).find('[name=parent_4_name]').val(),
+      parent_4_birthday:$(e.target).find('[name=parent_4_birthday]').val(),
+      parent_4_relation:$(e.target).find('[name=parent_4_relation]').val(),
+      person_child_num:$(e.target).find('[name=person_child_num]').val(),
+      person_addr_type:$(e.target).find('[name=person_addr_type]').val(),
+      person_jobname_1:$(e.target).find('[name=person_jobname_1]').val(),
+      person_jobplace_1:$(e.target).find('[name=person_jobplace_1]').val(),
+      person_jobstart_1:$(e.target).find('[name=person_jobstart_1]').val(),
+      person_jobend_1:$(e.target).find('[name=person_jobend_1]').val(),
+      person_jobname_2:$(e.target).find('[name=person_jobname_2]').val(),
+      person_jobplace_2:$(e.target).find('[name=person_jobplace_2]').val(),
+      person_jobstart_2:$(e.target).find('[name=person_jobstart_2]').val(),
+      person_jobend_2:$(e.target).find('[name=person_jobend_2]').val(),
+      person_jobname_3:$(e.target).find('[name=person_jobname_3]').val(),
+      person_jobplace_3:$(e.target).find('[name=person_jobplace_3]').val(),
+      person_jobstart_3:$(e.target).find('[name=person_jobstart_3]').val(),
+      person_jobend_3:$(e.target).find('[name=person_jobend_3]').val(),
+      spouse_jobname_1:$(e.target).find('[name=spouse_jobname_1]').val(),
+      spouse_jobplace_1:$(e.target).find('[name=spouse_jobplace_1]').val(),
+      spouse_jobstart_1:$(e.target).find('[name=spouse_jobstart_1]').val(),
+      spouse_jobend_1:$(e.target).find('[name=spouse_jobend_1]').val(),
+      spouse_jobname_2:$(e.target).find('[name=spouse_jobname_2]').val(),
+      spouse_jobplace_2:$(e.target).find('[name=spouse_jobplace_2]').val(),
+      spouse_jobstart_2:$(e.target).find('[name=spouse_jobstart_2]').val(),
+      spouse_jobend_2:$(e.target).find('[name=spouse_jobend_2]').val(),
+      spouse_jobname_3:$(e.target).find('[name=spouse_jobname_3]').val(),
+      spouse_jobplace_3:$(e.target).find('[name=spouse_jobplace_3]').val(),
+      spouse_jobstart_3:$(e.target).find('[name=spouse_jobstart_3]').val(),
+      spouse_jobend_3:$(e.target).find('[name=spouse_jobend_3]').val(),
       //done by justin
 
 

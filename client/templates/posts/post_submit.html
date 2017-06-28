@@ -123,6 +123,17 @@
       </div>
     </div>
 
+
+    <div class="form-group">
+      <label class="control-label" for="person_addr_type">14.户籍属性</label>
+      <div class="controls">
+          <select name="person_addr_type" id="person_addr_type" value="" class="form-control">
+            <option value="本地户籍">本地户籍</option>
+            <option value="外地户籍">外地户籍</option>
+      </select>
+      </div>
+      </div>
+
     <div class="form-group">
       <label class="control-label" for="person_height">14.身高(cm)</label>
       <div class="controls">
@@ -131,7 +142,7 @@
     </div>
 
     <div class="form-group">
-      <label class="control-label" for="person_id_type">15.教育水平</label>
+      <label class="control-label" for="person_education_level">15.教育水平</label>
       <div class="controls">
           <select name="person_education_level" id="person_education_level" class="form-control">
             <option value="初中及以下">初中及以下</option>
@@ -174,29 +185,41 @@
       </div>
     </div>
 
-    <div class="form-group">
-      <label class="control-label" for="person_child_num">18.子女资料</label>
+
+
+      <div class="form-group">
+      <label class="control-label" for="applicant_primary_school">20.子女资料</label>
       <div class="controls" style="display: flex;">
-        <p style="display: inline">18.子女资料</p>
-         <input name="person_child_num" id="person_child_num" type="text" value=""  class="form-control"/>
-         <input name="person_child_num" id="person_child_num" type="text" value=""  class="form-control"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>子女1：姓名</p></div>
+          <input name="child_1_name" id="child_1_name" type="text" value=""  class="form-control" style="width: 20%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>性别</p></div>
+          <input name="child_1_gender" id="child_1_gender" type="text" value=""  class="form-control" style="width: 10%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>出生日期</p></div>
+          <input name="child_1_birthday" id="child_1_birthday" type="date" value=""  class="form-control" style="width: 20%"/>
+      </div>
+
+      <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>子女2：姓名</p></div>
+          <input name="child_2_name" id="child_2_name" type="text" value=""  class="form-control" style="width: 20%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>性别</p></div>
+          <input name="child_2_gender" id="child_2_gender" type="text" value=""  class="form-control" style="width: 10%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>出生日期</p></div>
+          <input name="child_2_birthday" id="child_2_birthday" type="date" value=""  class="form-control" style="width: 20%"/>
+      </div>
+      <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>子女3：姓名</p></div>
+          <input name="child_3_name" id="child_3_name" type="text" value=""  class="form-control" style="width: 20%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>性别</p></div>
+          <input name="child_3_gender" id="child_3_gender" type="text" value=""  class="form-control" style="width: 10%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>出生日期</p></div>
+          <input name="child_3_birthday" id="child_3_birthday" type="date" value=""  class="form-control" style="width: 20%"/>
       </div>
       
-         
-      </div>
-
-
-
-
-
-    
-
-    
-
+    </div>
 
 
     <div class="form-group">
-      <label class="control-label" for="person_id_type">18.是否持有驾照</label>
+      <label class="control-label" for="person_if_driver_lisence">18.是否持有驾照</label>
       <div class="controls">
           <select name="person_if_driver_lisence" id="person_if_driver_lisence" class="form-control">
             <option value="是">是</option>
@@ -547,6 +570,46 @@
     </div>
 
 
+
+    <div class="form-group">
+      <label class="control-label" for="applicant_primary_school">106.同住老人</label>
+      <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>老人姓名</p></div>
+          <input name="parent_1_name" id="parent_1_name" type="text" value=""  class="form-control" style="width: 20%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>出生日期</p></div>
+          <input name="parent_1_birthday" id="parent_1_birthday" type="date" value=""  class="form-control" style="width: 20%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>與申請人關係</p></div>
+          <input name="parent_1_relation" id="parent_1_relation" type="text" value=""  class="form-control" style="width: 20%"/>
+      </div>
+
+      <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>老人姓名</p></div>
+          <input name="parent_2_name" id="parent_2_name" type="text" value=""  class="form-control" style="width: 20%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>出生日期</p></div>
+          <input name="parent_2_birthday" id="parent_2_birthday" type="date" value=""  class="form-control" style="width: 20%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>與申請人關係</p></div>
+          <input name="parent_2_relation" id="parent_2_relation" type="text" value=""  class="form-control" style="width: 20%"/>
+      </div>
+      <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>老人姓名</p></div>
+          <input name="parent_3_name" id="parent_3_name" type="text" value=""  class="form-control" style="width: 20%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>出生日期</p></div>
+          <input name="parent_3_birthday" id="parent_3_birthday" type="date" value=""  class="form-control" style="width: 20%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>與申請人關係</p></div>
+          <input name="parent_3_relation" id="parent_3_relation" type="text" value=""  class="form-control" style="width: 20%"/>
+      </div>
+      <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>老人姓名</p></div>
+          <input name="parent_4_name" id="parent_4_name" type="text" value=""  class="form-control" style="width: 20%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>出生日期</p></div>
+          <input name="parent_4_birthday" id="parent_4_birthday" type="date" value=""  class="form-control" style="width: 20%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>與申請人關係</p></div>
+          <input name="parent_4_relation" id="parent_4_relation" type="text" value=""  class="form-control" style="width: 20%"/>
+      </div>
+    </div>
+
+
+
     <div class="form-group">
       <label class="control-label" for="parent_disease">107.同住老人是否患有以下疾病(多选题)</label><br>
       <input type="checkbox" name="parent_disease" value="心脏病" /> 心脏病<br>
@@ -747,26 +810,105 @@
           </select>   
       </div>
     </div>
-     <div class="form-group">
-      <label class="control-label" for="layer">121.您所认识的律师姓名</label>
-    </div>
+
     <div class="form-group">
-      <label class="control-label" for="layer_name">律师姓名</label>
-      <div class="controls">
-          <input name="layer_name" id="layer_name" type="text" value=""  class="form-control"/>
+      <label class="control-label" for="layer">121.您所认识的律师姓名</label>
+      <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>律师姓名</p></div>
+          <input name="layer_name" id="layer_name" type="text" value=""  class="form-control" style="width: 30%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>律师电话</p></div>
+          <input name="layer_phone_num" id="layer_phone_num" type="text" value=""  class="form-control" style="width: 30%"/>
       </div>
     </div>
 
-    <div class="form-group">
-      <label class="control-label" for="layer_phone_num">律师电话</label>
-      <div class="controls">
-          <input name="layer_phone_num" id="layer_phone_num" type="text" value=""  class="form-control"/>
-      </div>
-    </div>
+
 
     <div class="form-group">    
       <label class="control-label" for="person_name" style="font-size: 20px" >3. 工作信息</label>  
     </div>
+
+
+    <div class="form-group">
+      <label class="control-label" for="layer">122.申請人工作履歷</label>
+      <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>單位名稱</p></div>
+          <input name="person_jobname_1" id="person_jobname_1" type="text" value=""  class="form-control" style="width: 30%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>所在省份城市</p></div>
+          <input name="person_jobplace_1" id="person_jobplace_1" type="text" value=""  class="form-control" style="width: 30%"/>
+      </div>
+      <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>起始時間</p></div>
+          <input name="person_jobstart_1" id="person_jobstart_1" type="date" value=""  class="form-control" style="width: 30%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>結束時間</p></div>
+          <input name="person_jobend_1" id="person_jobend_1" type="date" value=""  class="form-control" style="width: 30%"/>
+      </div>
+      <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>單位名稱</p></div>
+          <input name="person_jobname_2" id="person_jobname_2" type="text" value=""  class="form-control" style="width: 30%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>所在省份城市</p></div>
+          <input name="person_jobplace_2" id="person_jobplace_2" type="text" value=""  class="form-control" style="width: 30%"/>
+      </div>
+      <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>起始時間</p></div>
+          <input name="person_jobstart_2" id="person_jobstart_2" type="date" value=""  class="form-control" style="width: 30%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>結束時間</p></div>
+          <input name="person_jobend_2" id="person_jobend_2" type="date" value=""  class="form-control" style="width: 30%"/>
+      </div>
+      <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>單位名稱</p></div>
+          <input name="person_jobname_3" id="person_jobname_3" type="text" value=""  class="form-control" style="width: 30%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>所在省份城市</p></div>
+          <input name="person_jobplace_3" id="person_jobplace_3" type="text" value=""  class="form-control" style="width: 30%"/>
+      </div>
+      <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>起始時間</p></div>
+          <input name="person_jobstart_3" id="person_jobstart_3" type="date" value=""  class="form-control" style="width: 30%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>結束時間</p></div>
+          <input name="person_jobend_3" id="person_jobend_3" type="date" value=""  class="form-control" style="width: 30%"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="layer">123.配偶工作履歷</label>
+      <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>單位名稱</p></div>
+          <input name="spouse_jobname_1" id="spouse_jobname_1" type="text" value=""  class="form-control" style="width: 30%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>所在省份城市</p></div>
+          <input name="spouse_jobplace_1" id="spouse_jobplace_1" type="text" value=""  class="form-control" style="width: 30%"/>
+      </div>
+      <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>起始時間</p></div>
+          <input name="spouse_jobstart_1" id="spouse_jobstart_1" type="date" value=""  class="form-control" style="width: 30%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>結束時間</p></div>
+          <input name="spouse_jobend_1" id="spouse_jobend_1" type="date" value=""  class="form-control" style="width: 30%"/>
+      </div>
+      <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>單位名稱</p></div>
+          <input name="spouse_jobname_2" id="spouse_jobname_2" type="text" value=""  class="form-control" style="width: 30%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>所在省份城市</p></div>
+          <input name="spouse_jobplace_2" id="spouse_jobplace_2" type="text" value=""  class="form-control" style="width: 30%"/>
+      </div>
+      <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>起始時間</p></div>
+          <input name="spouse_jobstart_2" id="spouse_jobstart_2" type="date" value=""  class="form-control" style="width: 30%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>結束時間</p></div>
+          <input name="spouse_jobend_2" id="spouse_jobend_2" type="date" value=""  class="form-control" style="width: 30%"/>
+      </div>
+      <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>單位名稱</p></div>
+          <input name="spouse_jobname_3" id="spouse_jobname_3" type="text" value=""  class="form-control" style="width: 30%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>所在省份城市</p></div>
+          <input name="spouse_jobplace_3" id="spouse_jobplace_3" type="text" value=""  class="form-control" style="width: 30%"/>
+      </div>
+      <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>起始時間</p></div>
+          <input name="spouse_jobstart_3" id="spouse_jobstart_3" type="date" value=""  class="form-control" style="width: 30%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:15%"><p>結束時間</p></div>
+          <input name="spouse_jobend_3" id="spouse_jobend_3" type="date" value=""  class="form-control" style="width: 30%"/>
+      </div>
+    </div>
+
+
+
 
     <div class="form-group">
       <label class="control-label" for="applicant_title">124.申请人职称(没有请填无)</label>
@@ -920,7 +1062,7 @@
 
 
     <div class="form-group">
-      <label class="control-label" for="person_id">135.申请人</label>
+      <label class="control-label" for="person_id">139.申请人</label>
       <div class="controls" style="display: flex;">
           <div style="padding-left: 25px; padding-top: 8px"><p>信用卡1 : 发卡行</p></div>
           <input name="person_credit1_bank" id="person_credit1_bank" type="text" value=""  class="form-control" style="width: 25%"/>
@@ -1062,6 +1204,48 @@
           </select>
       </div>
     </div>
+
+
+    <div class="form-group">
+      <label class="control-label" for="user_disease">151.申请人是否患有以下疾病(多选题)</label><br>
+      <input type="checkbox" name="user_disease" value="心脏病" /> 心脏病<br>
+      <input type="checkbox" name="user_disease" value="糖尿病" /> 糖尿病<br>
+      <input type="checkbox" name="user_disease" value="肾脏病" /> 肾脏病<br>
+      <input type="checkbox" name="user_disease" value="血友病" /> 血友病<br>
+      <input type="checkbox" name="user_disease" value="肺结核" /> 肺结核<br>
+      <input type="checkbox" name="user_disease" value="哮喘病" /> 哮喘病<br>
+      <input type="checkbox" name="user_disease" value="癫痫症" /> 癫痫症<br>
+      <input type="checkbox" name="user_disease" value="高血压" /> 高血压<br>
+      <input type="checkbox" name="user_disease" value="高血脂" /> 高血脂<br>
+      <input type="checkbox" name="user_disease" value="高血糖" /> 高血糖<br>
+      <input type="checkbox" name="user_disease" value="心血管疾病" /> 心血管疾病<br>
+      <input type="checkbox" name="user_disease" value="癌症" /> 癌症<br>
+      <input type="checkbox" name="user_disease" value="慢性肺部疾病" /> 慢性肺部疾病<br>
+      <input type="checkbox" name="user_disease" value="遗传病" /> 遗传病<br>
+      <input type="checkbox" name="user_disease" value="其他慢性疾病" /> 其他慢性疾病<br>
+      <input type="checkbox" name="user_disease" value="无" /> 无<br>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_disease">152.配偶是否患有以下疾病(多选题)</label><br>
+      <input type="checkbox" name="spouse_disease" value="心脏病" /> 心脏病<br>
+      <input type="checkbox" name="spouse_disease" value="糖尿病" /> 糖尿病<br>
+      <input type="checkbox" name="spouse_disease" value="肾脏病" /> 肾脏病<br>
+      <input type="checkbox" name="spouse_disease" value="血友病" /> 血友病<br>
+      <input type="checkbox" name="spouse_disease" value="肺结核" /> 肺结核<br>
+      <input type="checkbox" name="spouse_disease" value="哮喘病" /> 哮喘病<br>
+      <input type="checkbox" name="spouse_disease" value="癫痫症" /> 癫痫症<br>
+      <input type="checkbox" name="spouse_disease" value="高血压" /> 高血压<br>
+      <input type="checkbox" name="spouse_disease" value="高血脂" /> 高血脂<br>
+      <input type="checkbox" name="spouse_disease" value="高血糖" /> 高血糖<br>
+      <input type="checkbox" name="spouse_disease" value="心血管疾病" /> 心血管疾病<br>
+      <input type="checkbox" name="spouse_disease" value="癌症" /> 癌症<br>
+      <input type="checkbox" name="spouse_disease" value="慢性肺部疾病" /> 慢性肺部疾病<br>
+      <input type="checkbox" name="spouse_disease" value="遗传病" /> 遗传病<br>
+      <input type="checkbox" name="spouse_disease" value="其他慢性疾病" /> 其他慢性疾病<br>
+      <input type="checkbox" name="spouse_disease" value="无" /> 无<br>
+    </div>
+
 
     <div class="form-group">
       <label class="control-label" for="person_id_type">157.申请人是否有大病经历</label>

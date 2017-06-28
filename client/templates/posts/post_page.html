@@ -11,14 +11,137 @@
   <img src="{{c.url get_hold_image}}" style="height:200px; width: 160px">
 
 
-  <div><p><strong>姓名：</strong>{{person_name}}</p></div>
+  <p><strong>姓名：</strong>{{person_name}}</p>
   <p><strong>生日：</strong>{{person_birthday}}</p>
   <p><strong>性别：</strong>{{person_gender}}</p>
   <p><strong>证件类型：</strong>{{person_id_type}}</p>
   <p><strong>证件号码：</strong>{{person_id}}</p>
   <p><strong>发证机关：</strong>{{person_id_issuer}}</p>
-  
-  <p><strong>同住老人患有以下疾病：</strong>{{parent_disease}}</p>
+  <p><strong>证件有效截止期间:</strong>{{person_id_issuer_date}}</p>
+  <p><strong>家庭住址 (请具体到门牌号或者房间号)：</strong>{{person_address}}</p>
+  <p><strong>出生地 (xx省xx市)：</strong>{{person_birth_place}}</p>
+  <p><strong>户籍所在地：</strong>{{person_addr_place}}</p>
+  <p><strong>身高(cm)：</strong>{{person_height}}</p>
+  <p><strong>教育水平：</strong>{{person_education_level}}</p>
+  <p><strong>婚姻状况：</strong>{{person_marriage}}</p>
+  <p><strong>是否有子女：</strong>{{person_if_son}}</p>
+  <p><strong>是否持有驾照：</strong>{{person_if_driver_lisence}}</p>
+  <p><strong>单位经济性质：</strong>{{guarantor_company_type}}</p>
+  <p><strong>所属行业：</strong>{{guarantor_company_industry}}</p>
+  <p><strong>职业：</strong>{{guarantor_job}}</p>
+  <p><strong>职务：</strong>{{guarantor_post}}</p>
+  <p><strong>融资车辆类型：</strong>{{car_type}}</p>
+  <p><strong>品牌：</strong>{{car_brand}}</p>
+  <p><strong>车型：</strong>{{motorcycle_type}}</p>
+  <p><strong>车辆价格：</strong>{{car_price}}</p>
+  <p><strong>GPS费用：</strong>{{gps_expense}}</p>
+  <p><strong>购置税：</strong>{{tax}}</p>
+  <p><strong>首付金额：</strong>{{down_payment}}</p>
+  <p><strong>首付比例：</strong>{{down_payment_percentage}}</p>
+  <p><strong>融资金额：</strong>{{loan_value}}</p>
+  <p><strong>融资期限：</strong>{{loan_term}}</p>
+  <p><strong>车辆颜色：</strong>{{car_color}}</p>
+  <p><strong>金融产品：</strong>{{financial_product}}</p>
+  <p><strong>车架号：</strong>{{car_id}}</p>
+  <p><strong>发动机号：</strong>{{engine_num}}</p>
+  <p><strong>经销商名称：</strong>{{dealer_name}}</p>
+  <p><strong>联系电话：</strong>{{dealer_phone_num}}</p>
+  <p><strong>申请人手机号码：</strong>{{applicant_phone_num}}</p>
+  <p><strong>本号码开始使用时间：</strong>{{applicant_phone_num_starting_date}}</p>
+  <p><strong>配偶手机号码：</strong>{{spouse_phone_num}}</p>
+  <p><strong>本号码开始使用时间：</strong>{{spouse_phone_num_starting_date}}</p>
+  <p><strong>家庭每月开支：</strong>{{family_expense}}</p>
+  <p><strong>家庭拥有住宅数量：</strong>{{family_house}}</p>
+  <p><strong>住宅状况：</strong>{{house_type}}</p>
+  <p><strong>房贷每月还款：</strong>{{repayment}}</p>
+  <p><strong>每月房租：</strong>{{house_rent}}</p>
+  <p><strong>入住日期：</strong>{{check_in_date}}</p>
+  <p><strong>子女学费总额（每年）：</strong>{{children_tuition}}</p>
+  <p><strong>是否与老人同住：</strong>{{live_with_parent}}</p>
+  <p><strong>申请人是否持有护照：</strong>{{applicant_passport}}</p>
+  <p><strong>配偶是否持有护照：</strong>{{spouse_passport}}</p>
+  <p><strong>申请人是否有出国/出境经历：</strong>{{applicant_go_abroad}}</p>
+  <p><strong>配偶是否有出国/出境经历：</strong>{{spouse_go_abroad}}</p>
+  <p><strong>申请人最近一次去过的国家：</strong>{{applicant_country}}</p>
+  <p><strong>配偶最近一次去过的国家：</strong>{{spouse_country}}</p>
+  <p><strong>申请人小学校名：</strong>{{applicant_primary_school}}</p>
+  <p><strong>申请人小学入学年份：</strong>{{applicant_primary_start}}</p>
+  <p><strong>申请人初中校名：</strong>{{applicant_middle_school}}</p>
+  <p><strong>申请人初中入学年份：</strong>{{applicant_middle_start}}</p>
+  <p><strong>申请人高中/中专校名：</strong>{{applicant_high_school}}</p>
+  <p><strong>申请人高中/中专入学年份：</strong>{{applicant_high_start}}</p>
+  <p><strong>申请人大学校名：</strong>{{applicant_undergraduate}}</p>
+  <p><strong>申请人大学入学年份：</strong>{{applicant_undergraduate_start}}</p>
+  <p><strong>申请人研究生校名：</strong>{{applicant_master}}</p>
+  <p><strong>申请人研究生入学年份：</strong>{{applicant_master_start}}</p>
+  <p><strong>申请人小学校名：</strong>{{applicant_primary_school}}</p>
+  <p><strong>配偶小学入学年份：</strong>{{spouse_primary_start}}</p>
+  <p><strong>配偶初中校名：</strong>{{spouse_middle_school}}</p>
+  <p><strong>配偶初中入学年份：</strong>{{spouse_middle_start}}</p>
+  <p><strong>配偶高中/中专校名：</strong>{{spouse_high_school}}</p>
+  <p><strong>配偶高中/中专入学年份：</strong>{{spouse_high_start}}</p>
+  <p><strong>配偶大学校名：</strong>{{spouse_undergraduate}}</p>
+  <p><strong>配偶大学入学年份：</strong>{{spouse_undergraduate_start}}</p>
+  <p><strong>配偶研究生校名：</strong>{{spouse_master}}</p>
+  <p><strong>配偶研究生入学年份：</strong>{{spouse_master_start}}</p>
+  <p><strong>申请人是否每周阅读纸质报纸：</strong>{{applicant_newspaper}}</p>
+  <p><strong>申请人是否认识律师：</strong>{{applicant_lawyer}}</p>
+  <p><strong>您所认识的律师姓名：</strong>{{layer_name}}</p>
+  <p><strong>您所认识的律师电话：</strong>{{layer_phone_num}}</p>
+  <p><strong>申请人职称：</strong>{{applicant_title}}</p>
+  <p><strong>配偶职称：</strong>{{spouse_title}}</p>
+  <p><strong>申请人从业资格证：</strong>{{applicant_certificate}}</p>
+  <p><strong>配偶从业资格证：</strong>{{spouse_certificate}}</p>
+  <p><strong>申请人年收入：</strong>{{applicant_income}}</p>
+  <p><strong>申请人固定收入/薪水是否超过总收入70%：</strong>{{person_inc_str}}</p>
+  <p><strong>配偶年收入：</strong>{{spouse_income}}</p>
+  <p><strong>配偶固定收入/薪水是否超过总收入70%：</strong>{{person_spouse_inc_str}}</p>
+  <p><strong>申请人是否有股票等金融产品交易账户：</strong>{{person_if_finance}}</p>
+  <p><strong>申请人股票等金融产品投资总额：</strong>{{person_finance_invest}}</p>
+  <p><strong>申请人持有储蓄卡的数量:</strong>{{person_num_debit}}</p>
+  <p><strong>配偶持有储蓄卡的数量</strong>{{person_spouse_num_debit}}</p>
+  <p><strong>申请人持有信用卡的数量</strong>{{person_num_credit}}</p>
+  <p><strong>配偶持有信用卡的数量</strong>{{person_spouse_credit}}</p>
+  <p><strong>是否有家庭贷款</strong>{{person_if_loan}}</p>
+  <p><strong>家庭贷款总额</strong>{{person_loan_amount}}</p>
+  <p><strong>家庭贷款类别</strong>{{person_loan_type}}</p>
+  <p><strong>申请人是否支付宝，微信支付等网络支付系统</strong>{{person_if_epay}}</p>
+  <p><strong>配偶人是否支付宝，微信支付等网络支付系统</strong>{{person_spouse_if_epay}}</p>
+  <p><strong>申请人近视度数（不近视请填0）</strong>{{person_shortsight}}</p>
+  <p><strong>配偶近视度数（不近视请填0）</strong>{{person_spouse_shortsight}}</p>
+  <p><strong>申请人是否每年体检</strong>{{person_if_healthexam}}</p>
+  <p><strong>配偶是否每年体检</strong>{{person_if_spouse_healthexam}}</p>
+  <p><strong>申请人是否有大病经历</strong>{{person_if_serious_ill}}</p>
+  <p><strong>配偶是否有大病经历</strong>{{person_spouse_if_serious_ill}}</p>
+  <p><strong>申请人是否有手术经历</strong>{{person_if_surgery}}</p>
+  <p><strong>配偶是否有手术经历</strong>{{person_spouse_if_surgery}}</p>
+  <p><strong>申请人是否吸烟</strong>{{person_if_smoke}}</p>
+  <p><strong>申请人吸烟频率</strong>{{person_smoke_frequency}}</p>
+  <p><strong>配偶是否吸烟</strong>{{person_spouse_if_smoke}}</p>
+  <p><strong>配偶吸烟频率</strong>{{person_spouse_smoke_frequency}}</p>
+  <p><strong>申请人是否饮酒</strong>{{person_if_drink}}</p>
+  <p><strong>申请人饮酒情况</strong>{{person_drink}}</p>
+  <p><strong>配偶是否饮酒</strong>{{person_spouse_if_drink}}</p>
+  <p><strong>配偶饮酒情况</strong>{{person_spouse_drink}}</p>
+  <p><strong>申请人是否经常在12点后入睡</strong>{{person_if_staylate}}</p>
+  <p><strong>配偶是否经常在12点后入睡</strong>{{person_spouse_if_staylate}}</p>
+  <p><strong>申请人是否经常失眠</strong>{{person_if_insomnia}}</p>
+  <p><strong>配偶是否经常失眠</strong>{{person_spouse_insomnia}}</p>
+  <p><strong>申请人是否经常在家吃饭</strong>{{person_if_eatathome}}</p>
+  <p><strong>配偶是否经常在家吃饭</strong>{{person_spouse_if_eatathome}}</p>
+  <p><strong>申请人每周锻炼次数</strong>{{person_exercise_frequency}}</p>
+  <p><strong>配偶每周锻炼次数</strong>{{person_spouse_exercise_frequency}}</p>
+  <p><strong>申请人是否持有健身房会员卡</strong>{{person_if_exercise_membership}}</p>
+  <p><strong>配偶是否持有健身房会员卡</strong>{{person_spouse_if_exercise_membership}}</p>
+  <p><strong>担保人与申请人关系</strong>{{guarantor_relationship}}</p>
+  <p><strong>与申请人首次认识时间（XX年XX月）：</strong>{{guarantor_first_meet}}</p>
+  <p><strong>紧急联系人1</strong>{{emergency1_name}}</p>
+  <p><strong>与申请人关系</strong>{{emergency1_relationship}}</p>
+  <p><strong>手机号码</strong>{{emergency1_contact}}</p>
+  <p><strong>紧急联系人2</strong>{{emergency2_name}}</p>
+  <p><strong>与申请人关系</strong>{{emergency2_relationship}}</p>
+  <p><strong>手机号码</strong>{{emergency2_contact}}</p>
+
 
 
 

@@ -11,6 +11,7 @@ Template.postSubmit.events({
       person_gender:$(e.target).find('[name=person_gender]').val(),
       person_birthday:$(e.target).find('[name=person_birthday]').val(),
       person_id_type:$(e.target).find('[name=person_id_type]').val(),
+      person_id_issuer:$(e.target).find('[name=person_id_issuer]').val(),
       userId: Meteor.userId(),
       latest: true,
       deleted: false,

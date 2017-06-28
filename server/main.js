@@ -6,6 +6,7 @@ Meteor.startup(() => {
  		cloud_name:'dcyqpeqbh',
  		api_key:'448942765988189',
  		api_secret: 'twiBkq48MujSH08yJ_HEli3SxhI',
+
  	}),
  	Accounts.config({
     	forbidClientAccountCreation: true
@@ -19,8 +20,6 @@ Meteor.startup(() => {
      //                       }
    // });
  	
-
-
 });
 
 

@@ -1,32 +1,41 @@
 
-var search_array
+
 Template.postSearch.events({
-  'click .btn': function() {   
-     search_array = Posts.find({person_name: document.getElementsByName('SearchName')[0].value});
-     Session.set('show', true);
-    
-    var date = new Date();
-    var begun = moment(date).format("YYYY.MM.DD.mm.ss");
-    var record = {
-      search_name: document.getElementsByName('SearchName')[0].value,
-      search_time: begun,
-      userId: Meteor.userId()
-    };
-    console.log(record);
+  'click .name_btn': function () {
+        let searchName = document.getElementsByName('SearchName')[0].value;
+        Session.set('searchArray', Posts.find({person_name: searchName, latest:true,deleted:false}).fetch());
+        
+        var date = new Date();
+        var begun = moment(date).format("YYYY.MM.DD.hh.mm.ss");
+        var record = {
+        search_name: document.getElementsByName('SearchName')[0].value,
+        search_time: begun,
+        userId: Meteor.userId()
+        };
+    //console.log(record);
     Records.insert(record);
+  },
 
 
+  'click .id_btn': function () {
+        let searchName = document.getElementsByName('SearchId')[0].value;
+        Session.set('searchArray', Posts.find({person_id: searchName,latest:true,deleted:false}).fetch());       
+        var date = new Date();
+        var begun = moment(date).format("YYYY.MM.DD.hh.mm.ss");
+        var record = {
+        search_name: document.getElementsByName('SearchName')[0].value,
+        search_time: begun,
+        userId: Meteor.userId()
+        };
+    //console.log(record);
+    Records.insert(record);
   }
 });
 
 Template.postSearch.helpers({
-  getInfo: function() {
-     return search_array
-  },
-
-  show: function(){
-        return Session.get('show');
-   }
+   getInfo() {
+        return Session.get('searchArray');
+    }
 });
 
 

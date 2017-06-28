@@ -1,22 +1,25 @@
 
 <template name="postSearch">
-   
-  
     <div class="form-group">
       <label class="control-label" for="title">按姓名搜索</label>
       <div class="controls">
           <input name="SearchName" id="SearchName" type="text" value="" placeholder="输入你要搜索的姓名" class="form-control"/>
       </div>
     </div>
-    <input type="submit" value="Search" class="btn btn-primary" />
+    <input type="submit" value="Search" class="name_btn btn btn-primary" />
+
+    <div class="form-group" style="margin-top: 2%">
+      <label class="control-label" for="title">按身份证号码搜索</label>
+      <div class="controls">
+          <input name="SearchId" id="SearchId" type="text" value="" placeholder="输入你要搜索的身份证号码" class="form-control"/>
+      </div>
+    </div>
+    <input type="submit" value="Search" class="id_btn btn btn-primary" />
 
     <div id="info" style="display: block; margin-top: 5%">
-        
-       {{#if show}}
        {{#each getInfo}}
           {{> postItem}}
        {{/each}}
-       {{/if}}
     </div>
     
 </template>

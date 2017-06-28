@@ -13,14 +13,14 @@
 
 
     <div class="form-group">
-      <label class="control-label" for="person_name">姓名</label>
+      <label class="control-label" for="person_name">4.申请人姓名</label>
       <div class="controls">
           <input name="person_name" id="person_name" type="text" value=""  class="form-control"/>
       </div>
     </div>
     
     <div class="form-group">
-      <label class="control-label" for="person_gender">性别</label>
+      <label class="control-label" for="person_gender">5.性别</label>
       <div class="controls">
           <select name="person_gender" id="person_gender" class="form-control">
             <option value="男">男</option>
@@ -30,14 +30,14 @@
     </div>
     
     <div class="form-group">
-      <label class="control-label" for="person_birthday">生日</label>
+      <label class="control-label" for="person_birthday">6.生日</label>
       <div class="controls">
          <input name="person_birthday" id="person_birthday" type="date" value=""  class="form-control"/>        
       </div>
     </div>
 
     <div class="form-group">
-      <label class="control-label" for="person_id_type">证件类型</label>
+      <label class="control-label" for="person_id_type">7.证件类型</label>
       <div class="controls">
           <select name="person_id_type" id="person_id_type" class="form-control">
             <option value="居民身份证">居民身份证</option>
@@ -48,18 +48,110 @@
             <option value="台湾居民往来内地通行证">台湾居民往来内地通行证</option>
             <option value="外国护照">外国护照</option>
           </select>
-
-
-          
+        
       </div>
     </div>
 
     <div class="form-group">
-      <label class="control-label" for="person_id">证件号码</label>
+      <label class="control-label" for="person_id">8.证件号码</label>
       <div class="controls">
           <input name="person_id" id="person_id" type="text" value=""  class="form-control"/>
       </div>
     </div>
+
+    <div class="form-group">
+      <label class="control-label" for="person_id">9.发证机关</label>
+      <div class="controls">
+          <input name="person_id_issuer" id="person_id_issuer" type="text" value=""  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="person_id">10.证件有效截止期间</label>
+      <div class="controls">
+          <input name="person_id_issuer_date" id="person_id_issuer_date" type="date" value=""  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="person_id">11.家庭住址 (请具体到门牌号或者房间号) </label>
+      <div class="controls">
+          <input name="person_address" id="person_address" type="text" value=""  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="person_id">12.出生地 (xx省xx市) </label>
+      <div class="controls">
+          <input name="person_birth_place" id="person_birth_place" type="text" value=""  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="person_id">13.户籍所在地</label>
+      <div class="controls">
+          <input name="person_addr_place" id="person_addr_place" type="text" value=""  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="person_id">14.身高(cm)</label>
+      <div class="controls">
+          <input name="person_height" id="person_height" type="text" value=""  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="person_id_type">15.教育水平</label>
+      <div class="controls">
+          <select name="person_education_level" id="person_education_level" class="form-control">
+            <option value="初中及以下">初中及以下</option>
+            <option value="高中/中专">高中/中专</option>
+            <option value="大学专科">大学专科</option>
+            <option value="大学本科">大学本科</option>
+            <option value="研究生">研究生</option>
+            <option value="博士及以上">博士及以上</option>
+          </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="person_id_type">16.婚姻状况</label>
+      <div class="controls">
+          <select name="person_marriage" id="person_marriage" class="form-control">
+            <option value="未婚">未婚</option>
+            <option value="已婚">已婚</option>
+            <option value="离异">离异</option>
+          </select>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label class="control-label" for="person_id_type">17.是否有子女</label>
+      <div class="controls">
+          <select name="person_if_son" id="person_if_son" class="form-control">
+            <option value="是">是</option>
+            <option value="否">否</option>
+          </select>
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label class="control-label" for="person_id_type">18.是否持有驾照</label>
+      <div class="controls">
+          <select name="person_if_driver_lisence" id="person_if_driver_lisence" class="form-control">
+            <option value="是">是</option>
+            <option value="否">否</option>
+          </select>
+      </div>
+    </div>
+
+
+
+
 
     <input type="submit" value="提交" class="btn btn-primary"/>
   </form>

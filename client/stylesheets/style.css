@@ -99,11 +99,6 @@ body {
   color: #bbb;
   white-space: nowrap; }
 
-#signup-link {
-  display: none
-}
-
-
 .load-more {
   display: block;
   border-radius: 3px;

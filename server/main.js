@@ -10,14 +10,8 @@ Meteor.startup(() => {
  	}),
  	Accounts.config({
     	forbidClientAccountCreation: true
-	}),
-	Accounts.createUser({
-                           username: 'wjy4528',
-                            password : '960918',
-                           profile  : {
-                                //publicly visible fields like firstname goes here
-                            }
-  });
+	})
+	
  	
 });
 

@@ -2,7 +2,8 @@
   "name": "carapply",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run",
+	"meteor": "MONGO_URL=mongodb://wjy4528:960918@ds135522.mlab.com:35522/wjy4528 meteor",
   },
   "dependencies": {
     "babel-runtime": "^6.23.0",

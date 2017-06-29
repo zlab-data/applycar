@@ -694,6 +694,19 @@
       <input type="checkbox" name="child_disease" value="无" /> 无<br>
     </div>
 
+    <script type="text/javascript">
+    console.log("here")
+      var mySelect=document.getElementsByName('child_disease');
+      var i;
+      for(var j = 0; j < mySelect.length ; j++) {
+          i = mySelect[j].value;
+          test="{{child_disease}}";
+          if(test.indexOf(i) !== -1){
+              mySelect[j].checked=true;
+          }
+      }
+    </script>
+
     <div class="form-group">
       <label class="control-label" for="live_with_parent">105.是否与老人同住</label>
       <div class="controls">
@@ -771,6 +784,19 @@
       <input type="checkbox" name="parent_disease" value="其他慢性疾病" /> 其他慢性疾病<br>
       <input type="checkbox" name="parent_disease" value="无" /> 无<br>
     </div>
+
+    <script type="text/javascript">
+    console.log("here")
+      var mySelect=document.getElementsByName('parent_disease');
+      var i;
+      for(var j = 0; j < mySelect.length ; j++) {
+          i = mySelect[j].value;
+          test="{{parent_disease}}";
+          if(test.indexOf(i) !== -1){
+              mySelect[j].checked=true;
+          }
+      }
+    </script>
 
     <div class="form-group">    
       <label class="control-label" for="person_name" style="font-size: 20px" >2. 基本信息</label>  
@@ -884,6 +910,20 @@
       <input type="checkbox" name="person_insurance" value="无" /> 无<br>
     </div>
 
+    <script type="text/javascript">
+    console.log("here")
+      var mySelect=document.getElementsByName('person_insurance');
+      var i;
+      for(var j = 0; j < mySelect.length ; j++) {
+          i = mySelect[j].value;
+          test="{{person_insurance}}";
+          if(test.indexOf(i) !== -1){
+              mySelect[j].checked=true;
+          }
+      }
+    </script>
+
+
     <div class="form-group">
       <label class="control-label" for="spouse_insurance">115.配偶是否有五险一金(多选题)</label><br>
       <input type="checkbox" name="spouse_insurance" value="养老保险" /> 养老保险<br>
@@ -894,6 +934,19 @@
       <input type="checkbox" name="spouse_insurance" value="住房公积金" /> 住房公积金<br>
       <input type="checkbox" name="spouse_insurance" value="无" /> 无<br>
     </div>
+
+    <script type="text/javascript">
+    console.log("here")
+      var mySelect=document.getElementsByName('spouse_insurance');
+      var i;
+      for(var j = 0; j < mySelect.length ; j++) {
+          i = mySelect[j].value;
+          test="{{spouse_insurance}}";
+          if(test.indexOf(i) !== -1){
+              mySelect[j].checked=true;
+          }
+      }
+    </script>
 
    <div class="form-group">
       <label class="control-label" for="applicant_primary_school">116.申请人教育信息</label>
@@ -993,6 +1046,19 @@
       <input type="checkbox" name="person_read_reply" value="电子邮件" /> 电子邮件<br>
       <input type="checkbox" name="person_read_reply" value="其他" /> 其他<br>
     </div>
+
+    <script type="text/javascript">
+    console.log("here")
+      var mySelect=document.getElementsByName('person_read_reply');
+      var i;
+      for(var j = 0; j < mySelect.length ; j++) {
+          i = mySelect[j].value;
+          test="{{person_read_reply}}";
+          if(test.indexOf(i) !== -1){
+              mySelect[j].checked=true;
+          }
+      }
+    </script>
 
     <div class="form-group">
       <label class="control-label" for="applicant_lawyer">120.申请人是否认识律师</label>
@@ -1497,6 +1563,19 @@
       <input type="checkbox" name="user_disease" value="无" /> 无<br>
     </div>
 
+    <script type="text/javascript">
+    console.log("here")
+      var mySelect=document.getElementsByName('user_disease');
+      var i;
+      for(var j = 0; j < mySelect.length ; j++) {
+          i = mySelect[j].value;
+          test="{{user_disease}}";
+          if(test.indexOf(i) !== -1){
+              mySelect[j].checked=true;
+          }
+      }
+    </script>
+
     <div class="form-group">
       <label class="control-label" for="spouse_disease">152.配偶是否患有以下疾病(多选题)</label><br>
       <input type="checkbox" name="spouse_disease" value="心脏病" /> 心脏病<br>
@@ -1516,6 +1595,19 @@
       <input type="checkbox" name="spouse_disease" value="其他慢性疾病" /> 其他慢性疾病<br>
       <input type="checkbox" name="spouse_disease" value="无" /> 无<br>
     </div>
+
+    <script type="text/javascript">
+    console.log("here")
+      var mySelect=document.getElementsByName('spouse_disease');
+      var i;
+      for(var j = 0; j < mySelect.length ; j++) {
+          i = mySelect[j].value;
+          test="{{spouse_disease}}";
+          if(test.indexOf(i) !== -1){
+              mySelect[j].checked=true;
+          }
+      }
+    </script>
 
     <div class="form-group">
       <label class="control-label" for="person_id_type">157.申请人是否有大病经历</label>

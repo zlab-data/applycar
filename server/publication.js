@@ -8,12 +8,12 @@ Meteor.publish('records', function() {
 });
 
 
-if(Meteor.users.findOne({username: 'wjy4528'})==false){
+if(Meteor.users.findOne({username: 'admin'})==false){
 	Accounts.createUser({
-                           username: 'wjy4528',
-                           password : '960918',
+                           username: 'admin',
+                           password : 'iamadmin123',
                            profile  : {
-                                                       //publicly visible fields like firstname goes here
+                                                   //publicly visible fields like firstname goes here
                             }
 	});
 }

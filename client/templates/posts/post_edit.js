@@ -437,34 +437,38 @@ Template.postEdit.events({
       //alert("请重新上传照片")
     
       //var photo = $.cloudinary.image(currentPostId);
-        console.log("innnnn");
+        //console.log("innnnn");
          Posts.update(currentPostId, {$set: previousProperties}, function(error) {
           if (error) {
             alert(error.reason);
           } 
         });
-         console.log("innnnn2");
+         //console.log("innnnn2");
         postProperties._id = Posts.insert(postProperties);
-        console.log("innnnn3");
+        //console.log("innnnn3");
         
-        var new_url = $.cloudinary.url(currentPostId+"_front_image.jpg")
-        console.log("newID="+postProperties._id)
-        console.log(new_url)
+        var new_url = $.cloudinary.url(currentPostId+"_front_image.jpg");
+        console.log(new_url);
+        console.log("check_first");
         Cloudinary.upload(new_url, {public_id: postProperties._id+"_front_image"}, function(err, res) {
           console.log(err);
           console.log("Upload Result: " + res);
+          console.log("check_first");
         });
-        console.log("innnnn4");
+        console.log("icheck_first");
         Router.go('postPage', {_id: postProperties._id});
+
+
 
     }else{
       Posts.update(currentPostId, {$set: previousProperties}, function(error) {
         if (error) {
           alert(error.reason);
         } 
-      });
+    });
+
       postProperties._id = Posts.insert(postProperties);
-      Cloudinary.upload(file, {public_id: postProperties._id}, function(err, res) {
+      Cloudinary.upload(file, {public_id: postProperties._id+"_front_image"}, function(err, res) {
         console.log("Upload Error: " + err);
         console.log("Upload Result: " + res);
       });

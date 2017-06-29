@@ -259,6 +259,8 @@ Template.postSubmit.events({
     }else if("undefined" === typeof hold_image){
         alert("请上传全身手持身份证照片");
     }else{
+
+      
       post._id = Posts.insert(post);   
       //console.log(file)
       Cloudinary.upload(front_image, {public_id: post._id+"_front_image"}, function(err, res) {
@@ -281,6 +283,8 @@ Template.postSubmit.events({
         console.log("Upload Error: " + err);
         console.log("Upload Result: " + res);
       });
+
+
 
     Router.go('postPage', post);
     }

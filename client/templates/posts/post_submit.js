@@ -40,8 +40,6 @@ Template.postSubmit.events({
 
 
     var post = {
-
-
       //done by justin
       parent_disease:parent_disease,
       child_disease:child_disease,
@@ -100,6 +98,11 @@ Template.postSubmit.events({
       spouse_jobplace_3:$(e.target).find('[name=spouse_jobplace_3]').val(),
       spouse_jobstart_3:$(e.target).find('[name=spouse_jobstart_3]').val(),
       spouse_jobend_3:$(e.target).find('[name=spouse_jobend_3]').val(),
+      front_image_code : Meteor.userId()+$(e.target).find('[name=person_id]').val()+"_front_image_1",
+      side_image_code:Meteor.userId()+$(e.target).find('[name=side_image_code]').val()+"_side_image_1",
+      hold_image_code:Meteor.userId()+$(e.target).find('[name=hold_image_code]').val()+"_hold_image_1",
+      car_front_image_code:Meteor.userId()+$(e.target).find('[name=car_front_image_code]').val()+"_car_front_image_1",
+      car_back_image_code:Meteor.userId()+$(e.target).find('[name=car_back_image_code]').val()+"_car_back_image_1",
       //done by justin
 
 
@@ -243,6 +246,13 @@ Template.postSubmit.events({
     };
 
     
+    var front_image_code=Meteor.userId()+$(e.target).find('[name=front_image_code]').val()+"_front_image_1";
+    var side_image_code=Meteor.userId()+$(e.target).find('[name=side_image_code]').val()+"_side_image_1";
+    var hold_image_code=Meteor.userId()+$(e.target).find('[name=hold_image_code]').val()+"_hold_image_1";
+    var car_front_image_code=Meteor.userId()+$(e.target).find('[name=car_front_image_code]').val()+"_car_front_image_1";
+    var car_back_image_code=Meteor.userId()+$(e.target).find('[name=car_back_image_code]').val()+"_car_back_image_1";
+
+
 
     var front_image = $('#user_front_image')[0].files[0];
     var side_image = $('#user_side_image')[0].files[0];
@@ -252,34 +262,37 @@ Template.postSubmit.events({
 
     if (person_name.value.length===0) {
         alert("申请人姓名不能为空");
-    }else if("undefined" === typeof front_image){
-        alert("请上传正面照片");
-    }else if("undefined" === typeof side_image){
-        alert("请上传侧面照片");
-    }else if("undefined" === typeof hold_image){
-        alert("请上传全身手持身份证照片");
-    }else{
+    }else if (person_id.value.length===0) {
+        alert("申请人身份证号不能为空");
+    }
+      else if("undefined" === typeof front_image){
+          alert("请上传正面照片");
+      }else if("undefined" === typeof side_image){
+          alert("请上传侧面照片");
+      }else if("undefined" === typeof hold_image){
+          alert("请上传全身手持身份证照片");
+      }else{
 
-      
+
       post._id = Posts.insert(post);   
       //console.log(file)
-      Cloudinary.upload(front_image, {public_id: post._id+"_front_image"}, function(err, res) {
+      Cloudinary.upload(front_image, {public_id: front_image_code}, function(err, res) {
         console.log("Upload Error: " + err);
         console.log("Upload Result: " + res);
       });
-      Cloudinary.upload(side_image, {public_id: post._id+"_side_image"}, function(err, res) {
+      Cloudinary.upload(side_image, {public_id: side_image_code}, function(err, res) {
         console.log("Upload Error: " + err);
         console.log("Upload Result: " + res);
       });
-      Cloudinary.upload(hold_image, {public_id: post._id+"_hold_image"}, function(err, res) {
+      Cloudinary.upload(hold_image, {public_id: hold_image_code}, function(err, res) {
         console.log("Upload Error: " + err);
         console.log("Upload Result: " + res);
       });
-      Cloudinary.upload(car_front_image, {public_id: post._id+"_car_front_image"}, function(err, res) {
+      Cloudinary.upload(car_front_image, {public_id: car_front_image_code}, function(err, res) {
         console.log("Upload Error: " + err);
         console.log("Upload Result: " + res);
       });
-      Cloudinary.upload(car_back_image, {public_id: post._id+"_car_back_image"}, function(err, res) {
+      Cloudinary.upload(car_back_image, {public_id: car_back_image_code}, function(err, res) {
         console.log("Upload Error: " + err);
         console.log("Upload Result: " + res);
       });

@@ -1,14 +1,13 @@
 Template.postPage.helpers({
 	get_front_image: function(){
-		return this._id+"_front_image";
+		return this.front_image_code;
 	},
 	get_side_image: function(){
-		return this._id+"_side_image";
+		return this.side_image_code;
 	},
 	get_hold_image: function(){
-		return this._id+"_hold_image";
+		return this.hold_image_code;
 	}
-
 })
 
 

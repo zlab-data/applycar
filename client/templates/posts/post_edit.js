@@ -65,8 +65,11 @@ Template.postEdit.events({
       spouse_jobplace_3:this.spouse_jobplace_3,
       spouse_jobstart_3:this.spouse_jobstart_3,
       spouse_jobend_3:this.spouse_jobend_3,
-
-
+      front_image_code:this.front_image_code,
+      side_image_code:this.side_image_code,
+      hold_image_code:this.hold_image_code,
+      car_front_image_code:this.car_front_image_code,
+      car_back_image_code:this.car_back_image_code,
       //Done By Justin
       person_name: this.person_name,
       person_id: this.person_id,
@@ -285,8 +288,11 @@ Template.postEdit.events({
       spouse_jobplace_3:$(e.target).find('[name=spouse_jobplace_3]').val(),
       spouse_jobstart_3:$(e.target).find('[name=spouse_jobstart_3]').val(),
       spouse_jobend_3:$(e.target).find('[name=spouse_jobend_3]').val(),
-
-
+      front_image_code:this.front_image_code,
+      side_image_code:this.side_image_code,
+      hold_image_code:this.hold_image_code,
+      car_front_image_code:this.car_front_image_code,
+      car_back_image_code:this.car_back_image_code,
       //Done By Justin
       person_name: $(e.target).find('[name=person_name]').val(),
       person_id: $(e.target).find('[name=person_id]').val(),
@@ -424,58 +430,69 @@ Template.postEdit.events({
       latest:true,
       deleted: false,
       edit_time: begun,
-    }
+    };
 
-   
+    
 
-    var file = $('#user_front_image')[0].files[0];
-    console.log(file)
+    var front_image_file = $('#user_front_image')[0].files[0];
+    var side_image_file = $('#user_side_image')[0].files[0];
+    var hold_image_file = $('#user_hold_image')[0].files[0];
+    var car_front_image_file = $('#car_front_image')[0].files[0];
+    var car_back_image_file = $('#car_back_image')[0].files[0];
+    //console.log(file)
 
     var currentPostId = this._id;
 
-    if ("undefined" === typeof file) {
-      //alert("请重新上传照片")
-    
-      //var photo = $.cloudinary.image(currentPostId);
-        //console.log("innnnn");
-         Posts.update(currentPostId, {$set: previousProperties}, function(error) {
-          if (error) {
-            alert(error.reason);
-          } 
-        });
-         //console.log("innnnn2");
-        postProperties._id = Posts.insert(postProperties);
-        //console.log("innnnn3");
-        
-        var new_url = $.cloudinary.url(currentPostId+"_front_image.jpg");
-        console.log(new_url);
-        console.log("check_first");
-        Cloudinary.upload(new_url, {public_id: postProperties._id+"_front_image"}, function(err, res) {
-          console.log(err);
-          console.log("Upload Result: " + res);
-          console.log("check_first");
-        });
-        console.log("icheck_first");
-        Router.go('postPage', {_id: postProperties._id});
+    if ("undefined" !== typeof front_image_file) {
+      postProperties['front_image_code']=postProperties['front_image_code']+"_1";
 
-
-
-    }else{
-      Posts.update(currentPostId, {$set: previousProperties}, function(error) {
-        if (error) {
-          alert(error.reason);
-        } 
-    });
-
-      postProperties._id = Posts.insert(postProperties);
-      Cloudinary.upload(file, {public_id: postProperties._id+"_front_image"}, function(err, res) {
+      Cloudinary.upload(front_image_file, {public_id: postProperties['front_image_code']}, function(err, res) {
         console.log("Upload Error: " + err);
         console.log("Upload Result: " + res);
       });
-      Router.go('postPage', {_id: postProperties._id});
+    }
+    if ("undefined" !== typeof side_image_file) {
+      postProperties['side_image_code']=postProperties['side_image_code']+"_1";
+
+      Cloudinary.upload(side_image_file, {public_id: postProperties['side_image_code']}, function(err, res) {
+        console.log("Upload Error: " + err);
+        console.log("Upload Result: " + res);
+      });
     }
 
-    
+    if ("undefined" !== typeof hold_image_file) {
+      postProperties['hold_image_code']=postProperties['hold_image_code']+"_1";
+
+      Cloudinary.upload(hold_image_file, {public_id: postProperties['hold_image_code']}, function(err, res) {
+        console.log("Upload Error: " + err);
+        console.log("Upload Result: " + res);
+      });
+    }
+    if ("undefined" !== typeof car_front_image_file) {
+      postProperties['car_front_image_code']=postProperties['car_front_image_code']+"_1";
+
+      Cloudinary.upload(car_front_image_file, {public_id: postProperties['car_front_image_code']}, function(err, res) {
+        console.log("Upload Error: " + err);
+        console.log("Upload Result: " + res);
+      });
+    }
+    if ("undefined" !== typeof car_back_image_file) {
+      postProperties['car_back_image_code']=postProperties['car_back_image_code']+"_1";
+
+      Cloudinary.upload(car_back_image_file, {public_id: postProperties['car_back_image_code']}, function(err, res) {
+        console.log("Upload Error: " + err);
+        console.log("Upload Result: " + res);
+      });
+    }
+
+      Posts.update(currentPostId, {$set: postProperties}, function(error) {
+        if (error) {
+          alert(error.reason);
+        } 
+      });
+      postProperties._id = Posts.insert(previousProperties);
+
+      Router.go('postPage', {_id: currentPostId});   
   },
 
 
@@ -549,8 +566,6 @@ Template.postEdit.events({
       spouse_jobplace_3:this.spouse_jobplace_3,
       spouse_jobstart_3:this.spouse_jobstart_3,
       spouse_jobend_3:this.spouse_jobend_3,
-
-
       //Done By Justin
       person_name: this.person_name,
       person_id: this.person_id,

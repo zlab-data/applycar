@@ -17,4 +17,14 @@ if (typeof Meteor.users.findOne({username: 'zlabtest'}) === "undefined" ){
                                                                            //publicly visible fields like firstname goes here
                         }
   });
+};
+
+if (typeof Meteor.users.findOne({username: 'daiyongfeng'}) === "undefined" ){
+  Accounts.createUser({
+                           username: 'daiyongfeng',
+                           password : 'zhishu123',
+                           profile  : {
+                                                                           //publicly visible fields like firstname goes here
+                        }
+  });
 }

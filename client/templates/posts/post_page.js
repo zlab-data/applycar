@@ -7,6 +7,11 @@ Template.postPage.helpers({
 	},
 	get_hold_image: function(){
 		return this.hold_image_code;
+	},
+	get_car_front_image: function(){
+		return this.car_front_image_code;
+	},get_car_back_image: function(){
+		return this.car_back_image_code;
 	}
 })
 

@@ -1,5 +1,12 @@
 <template name="postEdit">
   <form class="main form">
+
+    <div class="form-group">
+      <label class="control-label" for="person_name">数据录入员姓名<label class="required" >*</label></label>
+      <div class="controls">
+          <input name="type_person_name" id="type_person_name" type="text" value="{{type_person_name}}"  placeholder="{{type_person_name}}" class="form-control required-field"/>
+      </div>
+    </div>
     
     <div class="form-group">
     <label class="control-label" for="person_name">1.请上传本人正脸相片</label>
@@ -32,18 +39,18 @@
 
 
     <div class="form-group">
-      <label class="control-label" for="person_name">4.申请人姓名</label>
+      <label class="control-label" for="person_name">4.申请人姓名<label class="required" >*</label></label>
       <div class="controls">
-          <input name="person_name" id="person_name" type="text" value="{{person_name}}"  placeholder="{{person_name}}" class="form-control"/>
+          <input name="person_name" id="person_name" type="text" value="{{person_name}}"  placeholder="{{person_name}}" class="form-control required-field"/>
       </div>
     </div>
 
 
 
       <div class="form-group">
-      <label class="control-label" for="person_gender">5.性别</label>
+      <label class="control-label" for="person_gender">5.性别<label class="required" >*</label></label>
       <div class="controls">
-          <select name="person_gender" id="person_gender" value="{{person_gender}}" class="form-control">
+          <select name="person_gender" id="person_gender" value="{{person_gender}}" class="form-control required-field">
             <option value="男">男</option>
             <option value="女">女</option>
       </select>
@@ -61,14 +68,14 @@
     </script>
 
     <div class="form-group">
-      <label class="control-label" for="person_birthday">6.生日</label>
+      <label class="control-label" for="person_birthday">6.生日<label class="required" >*</label></label>
       <div class="controls">
          <input name="person_birthday" id="person_birthday" type="date" value="{{person_birthday}}"  class="form-control"/>        
       </div>
     </div>
 
       <div class="form-group">
-      <label class="control-label" for="person_id_type">7.证件类型</label>
+      <label class="control-label" for="person_id_type">7.证件类型<label class="required" >*</label></label>
       <div class="controls">
           <select name="person_id_type" id="person_id_type" class="form-control" value="{{person_id_type}}">
             <option value="居民身份证">居民身份证</option>
@@ -97,37 +104,37 @@
     </script>
 
     <div class="form-group">
-      <label class="control-label" for="person_id">8.证件号码</label>
+      <label class="control-label" for="person_id">8.证件号码<label class="required" >*</label></label>
       <div class="controls">
-          <input name="person_id" id="person_id" type="text" value="{{person_id}}"  class="form-control"/>
+          <input name="person_id" id="person_id" type="text" value="{{person_id}}"  class="form-control required-field"/>
       </div>
     </div>
 
     <div class="form-group">
-      <label class="control-label" for="person_id_issuer">9.发证机关</label>
+      <label class="control-label" for="person_id_issuer">9.发证机关<label class="required" >*</label></label>
       <div class="controls">
-          <input name="person_id_issuer" id="person_id_issuer" type="text" value="{{person_id_issuer}}"  class="form-control"/>
+          <input name="person_id_issuer" id="person_id_issuer" type="text" value="{{person_id_issuer}}"  class="form-control required-field"/>
       </div>
     </div>
 
 
     <div class="form-group">
-      <label class="control-label" for="person_id_issuer_date">10.证件有效截止期间</label>
+      <label class="control-label" for="person_id_issuer_date">10.证件有效截止期间<label class="required" >*</label></label>
       <div class="controls">
           <input name="person_id_issuer_date" id="person_id_issuer_date" type="date" value="{{person_id_issuer_date}}"  class="form-control"/>
       </div>
     </div>
 
     <div class="form-group">
-      <label class="control-label" for="person_address">11.家庭住址 (请具体到门牌号或者房间号) </label>
+      <label class="control-label" for="person_address">11.家庭住址 (请具体到门牌号或者房间号)<label class="required" >*</label> </label>
       <div class="controls">
-          <input name="person_address" id="person_address" type="text" value="{{person_address}}"  class="form-control"/>
+          <input name="person_address" id="person_address" type="text" value="{{person_address}}"  class="form-control required-field"/>
       </div>
     </div>
 
     <div class="form-group">
       
-      <label class="control-label" for="person_name" style="font-size: 20px" >2. 申请人户口簿</label>
+      <label class="control-label" for="person_name" style="font-size: 20px" >2. 申请人户口簿<label class="required" >*</label></label>
    
     </div>
 
@@ -139,16 +146,16 @@
     </div>
 
     <div class="form-group">
-      <label class="control-label" for="person_addr_place">13.户籍所在地</label>
+      <label class="control-label" for="person_addr_place">13.户籍所在地<label class="required" >*</label></label>
       <div class="controls">
-          <input name="person_addr_place" id="person_addr_place" type="text" value="{{person_addr_place}}"  class="form-control"/>
+          <input name="person_addr_place" id="person_addr_place" type="text" value="{{person_addr_place}}"  class="form-control required-field"/>
       </div>
     </div>
 
     <div class="form-group">
-      <label class="control-label" for="person_addr_type">14.户籍属性</label>
+      <label class="control-label" for="person_addr_type">14.户籍属性<label class="required" >*</label></label>
       <div class="controls">
-          <select name="person_addr_type" id="person_addr_type" value="{{person_addr_type}}" class="form-control">
+          <select name="person_addr_type" id="person_addr_type" value="{{person_addr_type}}" class="form-control required-field">
             <option value="本地户籍">本地户籍</option>
             <option value="外地户籍">外地户籍</option>
       </select>
@@ -165,7 +172,7 @@
 
 
     <div class="form-group">
-      <label class="control-label" for="person_education_level">16.教育水平</label>
+      <label class="control-label" for="person_education_level">16.教育水平<label class="required" >*</label></label>
       <div class="controls">
           <select name="person_education_level" id="person_education_level" class="form-control">
             <option value="初中及以下">初中及以下</option>
@@ -193,7 +200,7 @@
 
 
     <div class="form-group">
-      <label class="control-label" for="person_marriage">17.婚姻状况</label>
+      <label class="control-label" for="person_marriage">17.婚姻状况<label class="required" >*</label></label>
       <div class="controls">
           <select name="person_marriage" id="person_marriage" class="form-control">
             <option value="未婚">未婚</option>
@@ -282,6 +289,12 @@
       
     </div>
 
+     <div class="form-group">
+      
+      <label class="control-label" for="person_name" style="font-size: 20px" >3. 申请人驾驶证</label>
+   
+    </div>
+
 
     <div class="form-group">
       <label class="control-label" for="person_if_driver_lisence">21.是否持有驾照</label>
@@ -303,6 +316,647 @@
         }
     }
     </script>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_license_type">22.驾照类型</label>
+      <div class="controls">
+          <input name="person_license_type" id="person_license_type" type="text" value="{{person_license_type}}" placeholder="{{person_license_type}}" class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_license_num">23.驾照号码</label>
+      <div class="controls">
+          <input name="person_license_num" id="person_license_num" type="text" value="{{person_license_num}}" placeholder="{{person_license_num}}" class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_license_issue_date">24.驾照发证时间（XX年XX月）</label>
+      <div class="controls">
+          <input name="person_license_issue_date" id="person_license_issue_date" type="text" value="{{person_license_issue_date}}" placeholder="{{person_license_issue_date}}" class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_license_due">25.驾照有效期截止时间（XX年XX月）</label>
+      <div class="controls">
+          <input name="person_license_due" id="person_license_due" type="text" value="{{person_license_due}}" placeholder="{{person_license_due}}" class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      
+      <label class="control-label" for="person_name" style="font-size: 20px" >4. 申请人工资条</label>
+   
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_income_month">26.每月收入</label>
+      <div class="controls">
+          <input name="person_income_month" id="person_income_month" type="text" value="{{person_income_month}}" placeholder="{{person_income_month}}" class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_company">27.单位名称</label>
+      <div class="controls">
+          <input name="person_company" id="person_company" type="text" value="{{person_company}}" placeholder="{{person_company}}" class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_company_phone">28.单位电话</label>
+      <div class="controls">
+          <input name="person_company_phone" id="person_company_phone" type="text" value="{{person_company_phone}}" placeholder="{{person_company_phone}}" class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_company_addr">29.单位地址</label>
+      <div class="controls">
+          <input name="person_company_addr" id="person_company_addr" type="text" value="{{person_company_addr}}" placeholder="{{person_company_addr}}" class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_company_type">30.单位经济性质</label>
+      <div class="controls">
+          <select name="person_company_type" id="person_company_type" class="form-control" value="{{person_company_type}}">
+            <option value="国有经济">国有经济</option>
+            <option value="集体经济">集体经济</option>
+            <option value="私营">私营</option>
+            <option value="民营">民营</option>
+            <option value="股份合作">股份合作</option>
+            <option value="其他股份制">其他股份制</option>
+            <option value="三资">三资</option>
+            <option value="其他">其他</option>
+          </select>   
+      </div>
+    </div>
+    
+    <script>
+    var mySelect = document.getElementById('person_company_type');
+
+    for(var i, j = 0; i = mySelect.options[j]; j++) {
+        if(i.value == "{{person_company_type}}") {
+            mySelect.selectedIndex = j;
+            break;
+        }
+    }
+    </script>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_company_industry">31.所属行业</label>
+      <div class="controls">
+          <select name="person_company_industry" id="person_company_industry" class="form-control" value="{{person_company_industry}}">
+            <option value="农林牧渔">农林牧渔</option>
+            <option value="邮电通讯">邮电通讯</option>
+            <option value="房地产">房地产</option>
+            <option value="教科文卫">教科文卫</option>
+            <option value="工业">工业</option>
+            <option value="银行">银行</option>
+            <option value="证券">证券</option>
+            <option value="保险">保险</option>
+            <option value="商业">商业</option>
+            <option value="机关团体">机关团体</option>
+            <option value="其他">其他</option>
+          </select>   
+      </div>
+    </div>
+    
+    <script>
+    var mySelect = document.getElementById('person_company_industry');
+
+    for(var i, j = 0; i = mySelect.options[j]; j++) {
+        if(i.value == "{{person_company_industry}}") {
+            mySelect.selectedIndex = j;
+            break;
+        }
+    }
+    </script>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_job">32.职业</label>
+      <div class="controls">
+          <select name="person_job" id="person_job" class="form-control" value="{{person_job}}">
+            <option value="公务员">公务员</option>
+            <option value="事业单位员工">事业单位员工</option>
+            <option value="工人">工人</option>
+            <option value="农民">农民</option>
+            <option value="军人">军人</option>
+            <option value="职员">职员</option>
+            <option value="私人业主">私人业主</option>
+            <option value="学生">学生</option>
+            <option value="自由职业者">自由职业者</option>
+            <option value="无">无</option>
+            <option value="其他">其他</option>
+          </select>   
+      </div>
+    </div>
+    
+    <script>
+    var mySelect = document.getElementById('person_job');
+
+    for(var i, j = 0; i = mySelect.options[j]; j++) {
+        if(i.value == "{{person_job}}") {
+            mySelect.selectedIndex = j;
+            break;
+        }
+    }
+    </script>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_post">33.职务</label>
+      <div class="controls">
+          <select name="person_post" id="person_post" class="form-control" value="{{person_post}}">
+            <option value="厅局级及以上/企业负责人">厅局级及以上/企业负责人</option>
+            <option value="县处级/总经理">县处级/总经理</option>
+            <option value="科级/部门经理">科级/部门经理</option>
+            <option value="科员级/职员">科员级/职员</option>
+            <option value="其他">其他</option>
+          </select>   
+      </div>
+    </div>
+    
+    <script>
+    var mySelect = document.getElementById('person_post');
+
+    for(var i, j = 0; i = mySelect.options[j]; j++) {
+        if(i.value == "{{person_post}}") {
+            mySelect.selectedIndex = j;
+            break;
+        }
+    }
+    </script>
+
+
+    <div class="form-group">
+      
+      <label class="control-label" for="person_name" style="font-size: 20px" >5. 配偶身份证</label>
+   
+    </div>
+
+   <div class="form-group">
+      <label class="control-label" for="person_name">34.配偶姓名</label>
+      <div class="controls">
+          <input name="spouse_name" id="spouse_name" type="text" value="{{spouse_name}}" placeholder="{{spouse_name}}" class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="person_birthday">35.出生日期</label>
+      <div class="controls">
+         <input name="spouse_birthday" id="spouse_birthday" type="date" value="{{spouse_birthday}}" placeholder="{{spouse_birthday}}" class="form-control"/>        
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="person_id_type">36.证件类型</label>
+      <div class="controls">
+          <select name="spouse_id_type" id="spouse_id_type" class="form-control" value="{{spouse_id_type}}">
+            <option value="居民身份证">居民身份证</option>
+            <option value="军官证">军官证</option>
+            <option value="武警警官证">武警警官证</option>
+            <option value="士兵证">士兵证</option>
+            <option value="港澳居民往来内地通行证">港澳居民往来内地通行证</option>
+            <option value="台湾居民往来内地通行证">台湾居民往来内地通行证</option>
+            <option value="外国护照">外国护照</option>
+          </select>
+        </div>
+    </div>
+    
+    <script>
+    var mySelect = document.getElementById('spouse_id_type');
+
+    for(var i, j = 0; i = mySelect.options[j]; j++) {
+        if(i.value == "{{spouse_id_type}}") {
+            mySelect.selectedIndex = j;
+            break;
+        }
+    }
+    </script>
+
+    <div class="form-group">
+      <label class="control-label" for="person_id_issuer">37.发证机关</label>
+      <div class="controls">
+          <input name="spouse_id_issuer" id="spouse_id_issuer" type="text" value="{{spouse_id_issuer}}" placeholder="{{spouse_id_issuer}}" class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="person_id_issuer_date">38.证件有效截止期间</label>
+      <div class="controls">
+          <input name="spouse_id_issuer_date" id="spouse_id_issuer_date" type="date" value="{{spouse_id_issuer_date}}" placeholder="{{spouse_id_issuer_date}}" class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="person_id">39.证件号码</label>
+      <div class="controls">
+          <input name="spouse_id" id="spouse_id" type="text" value="{{spouse_id}}" placeholder="{{spouse_id}}"  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      
+      <label class="control-label" for="person_name" style="font-size: 20px" >6. 配偶户口簿</label>
+   
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="person_birth_place">40.出生地 (xx省xx市) </label>
+      <div class="controls">
+          <input name="spouse_birth_place" id="spouse_birth_place" type="text" value="{{spouse_birth_place}}" placeholder="{{spouse_birth_place}}" class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="person_addr_place">41.户籍所在地</label>
+      <div class="controls">
+          <input name="spouse_addr_place" id="spouse_addr_place" type="text" value="{{spouse_addr_place}}" placeholder="{{spouse_addr_place}}" class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="person_if_son">42.户籍属性</label>
+      <div class="controls">
+          <select name="spouse_addr_type" id="spouse_addr_type" class="form-control" value="{{spouse_addr_type}}">
+            <option value="本地户籍">本地户籍</option>
+            <option value="外地户籍">外地户籍</option>
+          </select>
+      </div>
+    </div>
+    
+    <script>
+    var mySelect = document.getElementById('spouse_addr_type');
+
+    for(var i, j = 0; i = mySelect.options[j]; j++) {
+        if(i.value == "{{spouse_addr_type}}") {
+            mySelect.selectedIndex = j;
+            break;
+        }
+    }
+    </script>
+
+    <div class="form-group">
+      <label class="control-label" for="person_education_level">43.教育水平</label>
+      <div class="controls">
+          <select name="spouse_education_level" id="spouse_education_level" class="form-control" value="{{spouse_education_level}}">
+            <option value="初中及以下">初中及以下</option>
+            <option value="高中/中专">高中/中专</option>
+            <option value="大学专科">大学专科</option>
+            <option value="大学本科">大学本科</option>
+            <option value="研究生">研究生</option>
+            <option value="博士及以上">博士及以上</option>
+          </select>
+      </div>
+    </div>
+    
+    <script>
+    var mySelect = document.getElementById('spouse_education_level');
+
+    for(var i, j = 0; i = mySelect.options[j]; j++) {
+        if(i.value == "{{spouse_education_level}}") {
+            mySelect.selectedIndex = j;
+            break;
+        }
+    }
+    </script>
+
+    <div class="form-group">
+      <label class="control-label" for="person_height">44.身高(cm)</label>
+      <div class="controls">
+          <input name="spouse_height" id="spouse_height" type="text" value="{{spouse_height}}" placeholder="{{spouse_height}}" class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      
+      <label class="control-label" for="person_name" style="font-size: 20px" >7. 配偶驾驶证</label>
+   
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="person_if_driver_lisence">45.是否持有驾照</label>
+      <div class="controls">
+          <select name="spouse_if_driver_lisence" id="spouse_if_driver_lisence" class="form-control" value="{{spouse_if_driver_lisence}}">
+            <option value="是">是</option>
+            <option value="否">否</option>
+          </select>
+      </div>
+    </div>
+    
+    <script>
+    var mySelect = document.getElementById('spouse_if_driver_lisence');
+
+    for(var i, j = 0; i = mySelect.options[j]; j++) {
+        if(i.value == "{{spouse_if_driver_lisence}}") {
+            mySelect.selectedIndex = j;
+            break;
+        }
+    }
+    </script>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_license_type">46.驾照类型</label>
+      <div class="controls">
+          <input name="spouse_license_type" id="spouse_license_type" type="text" value="{{spouse_license_type}}"  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_license_num">47.驾照号码</label>
+      <div class="controls">
+          <input name="spouse_license_num" id="spouse_license_num" type="text" value="{{spouse_license_num}}"  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_license_issue_date">48.驾照发证时间</label>
+      <div class="controls">
+          <input name="spouse_license_issue_date" id="spouse_license_issue_date" type="text" value="{{spouse_license_issue_date}}"  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_license_due">49.驾照有效期截止时间</label>
+      <div class="controls">
+          <input name="spouse_license_due" id="spouse_license_due" type="text" value="{{spouse_license_due}}"  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      
+      <label class="control-label" for="person_name" style="font-size: 20px" >8. 配偶工资条</label>
+   
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_income_month">50.每月收入</label>
+      <div class="controls">
+          <input name="spouse_income_month" id="spouse_income_month" type="text" value="{{spouse_income_month}}"  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_company">51.单位名称</label>
+      <div class="controls">
+          <input name="spouse_company" id="spouse_company" type="text" value="{{spouse_company}}"  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_company_phone">52.单位电话</label>
+      <div class="controls">
+          <input name="spouse_company_phone" id="spouse_company_phone" type="text" value="{{spouse_company_phone}}"  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_company_addr">53.单位地址</label>
+      <div class="controls">
+          <input name="spouse_company_addr" id="spouse_company_addr" type="text" value="{{spouse_company_addr}}"  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_company_type">54.单位经济性质</label>
+      <div class="controls">
+          <select name="spouse_company_type" id="spouse_company_type" class="form-control" value="{{spouse_company_type}}">
+            <option value="国有经济">国有经济</option>
+            <option value="集体经济">集体经济</option>
+            <option value="私营">私营</option>
+            <option value="民营">民营</option>
+            <option value="股份合作">股份合作</option>
+            <option value="其他股份制">其他股份制</option>
+            <option value="三资">三资</option>
+            <option value="其他">其他</option>
+          </select>   
+      </div>
+    </div>
+
+    <script>
+    var mySelect = document.getElementById('spouse_company_type');
+
+    for(var i, j = 0; i = mySelect.options[j]; j++) {
+        if(i.value == "{{spouse_company_type}}") {
+            mySelect.selectedIndex = j;
+            break;
+        }
+    }
+    </script>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_company_industry">55.所属行业</label>
+      <div class="controls">
+          <select name="spouse_company_industry" id="spouse_company_industry" class="form-control" value="{{spouse_company_industry}}">
+            <option value="农林牧渔">农林牧渔</option>
+            <option value="邮电通讯">邮电通讯</option>
+            <option value="房地产">房地产</option>
+            <option value="教科文卫">教科文卫</option>
+            <option value="工业">工业</option>
+            <option value="银行">银行</option>
+            <option value="证券">证券</option>
+            <option value="保险">保险</option>
+            <option value="商业">商业</option>
+            <option value="机关团体">机关团体</option>
+            <option value="其他">其他</option>
+          </select>   
+      </div>
+    </div>
+
+    <script>
+    var mySelect = document.getElementById('spouse_company_industry');
+
+    for(var i, j = 0; i = mySelect.options[j]; j++) {
+        if(i.value == "{{spouse_company_industry}}") {
+            mySelect.selectedIndex = j;
+            break;
+        }
+    }
+    </script>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_job">56.职业</label>
+      <div class="controls">
+          <select name="spouse_job" id="spouse_job" class="form-control" value="{{spouse_job}}">
+            <option value="公务员">公务员</option>
+            <option value="事业单位员工">事业单位员工</option>
+            <option value="工人">工人</option>
+            <option value="农民">农民</option>
+            <option value="军人">军人</option>
+            <option value="职员">职员</option>
+            <option value="私人业主">私人业主</option>
+            <option value="学生">学生</option>
+            <option value="自由职业者">自由职业者</option>
+            <option value="无">无</option>
+            <option value="其他">其他</option>
+          </select>   
+      </div>
+    </div>
+
+    <script>
+    var mySelect = document.getElementById('spouse_job');
+
+    for(var i, j = 0; i = mySelect.options[j]; j++) {
+        if(i.value == "{{spouse_job}}") {
+            mySelect.selectedIndex = j;
+            break;
+        }
+    }
+    </script>
+
+    <div class="form-group">
+      <label class="control-label" for="spouse_post">57.职务</label>
+      <div class="controls">
+          <select name="spouse_post" id="spouse_post" class="form-control" value="{{spouse_post}}">
+            <option value="厅局级及以上/企业负责人">厅局级及以上/企业负责人</option>
+            <option value="县处级/总经理">县处级/总经理</option>
+            <option value="科级/部门经理">科级/部门经理</option>
+            <option value="科员级/职员">科员级/职员</option>
+            <option value="其他">其他</option>
+          </select>   
+      </div>
+    </div>
+
+    <script>
+    var mySelect = document.getElementById('spouse_post');
+
+    for(var i, j = 0; i = mySelect.options[j]; j++) {
+        if(i.value == "{{spouse_post}}") {
+            mySelect.selectedIndex = j;
+            break;
+        }
+    }
+    </script>
+
+    <div class="form-group">
+      
+      <label class="control-label" for="person_name" style="font-size: 20px" >9. 担保人身份证</label>
+   
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="guarantor_name">58.担保人姓名</label>
+      <div class="controls">
+          <input name="guarantor_name" id="guarantor_name" type="text" value="{{guarantor_name}}"  class="form-control"/>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label class="control-label" for="guarantor_gender">59.性别</label>
+      <div class="controls">
+          <select name="guarantor_gender" id="guarantor_gender" class="form-control" value="{{guarantor_gender}}">
+            <option value="男">男</option>
+            <option value="女">女</option>
+          </select>   
+      </div>
+    </div>
+    
+    <script>
+    var mySelect = document.getElementById('guarantor_gender');
+
+    for(var i, j = 0; i = mySelect.options[j]; j++) {
+        if(i.value == "{{guarantor_gender}}") {
+            mySelect.selectedIndex = j;
+            break;
+        }
+    }
+    </script>
+
+    <div class="form-group">
+      <label class="control-label" for="guarantor_birthday">60.生日</label>
+      <div class="controls">
+         <input name="guarantor_birthday" id="guarantor_birthday" type="date" value="{{guarantor_birthday}}"  class="form-control"/>        
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="guarantor_id_type">61.证件类型</label>
+      <div class="controls">
+          <select name="guarantor_id_type" id="guarantor_id_type" class="form-control" value="{{guarantor_id_type}}">
+            <option value="居民身份证">居民身份证</option>
+            <option value="军官证">军官证</option>
+            <option value="武警警官证">武警警官证</option>
+            <option value="士兵证">士兵证</option>
+            <option value="港澳居民往来内地通行证">港澳居民往来内地通行证</option>
+            <option value="台湾居民往来内地通行证">台湾居民往来内地通行证</option>
+            <option value="外国护照">外国护照</option>
+          </select>
+        </div>
+    </div>
+
+    <script>
+    var mySelect = document.getElementById('guarantor_id_type');
+
+    for(var i, j = 0; i = mySelect.options[j]; j++) {
+        if(i.value == "{{guarantor_id_type}}") {
+            mySelect.selectedIndex = j;
+            break;
+        }
+    }
+    </script>
+
+    <div class="form-group">
+      <label class="control-label" for="guarantor_id">62.证件号码</label>
+      <div class="controls">
+          <input name="guarantor_id" id="guarantor_id" type="text" value="{{guarantor_id}}"  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="guarantor_id_issuer">63.发证机关</label>
+      <div class="controls">
+          <input name="guarantor_id_issuer" id="guarantor_id_issuer" type="text" value="{{guarantor_id_issuer}}"  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="guarantor_id_issuer_date">64.证件有效截止期间</label>
+      <div class="controls">
+          <input name="guarantor_id_issuer_date" id="guarantor_id_issuer_date" type="date" value="{{guarantor_id_issuer_date}}"  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="guarantor_address">65.家庭住址 (请具体到门牌号或者房间号) </label>
+      <div class="controls">
+          <input name="guarantor_address" id="guarantor_address" type="text" value="{{guarantor_address}}"  class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      
+      <label class="control-label" for="person_name" style="font-size: 20px" >10. 担保人工资条</label>
+   
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="guarantor_company">66.单位名称</label>
+      <div class="controls">
+          <input name="guarantor_company" id="guarantor_company" type="text" value="{{guarantor_company}}"  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="guarantor_income_month">67.每月收入</label>
+      <div class="controls">
+          <input name="guarantor_income_month" id="guarantor_income_month" type="text" value="{{guarantor_income_month}}"  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="guarantor_company_phone">68.单位电话</label>
+      <div class="controls">
+          <input name="guarantor_company_phone" id="guarantor_company_phone" type="text" value="{{guarantor_company_phone}}"  class="form-control"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="guarantor_company_addr">69.单位地址</label>
+      <div class="controls">
+          <input name="guarantor_company_addr" id="guarantor_company_addr" type="text" value="{{guarantor_company_addr}}"  class="form-control"/>
+      </div>
+    </div>
 
 
     <div class="form-group">
@@ -1345,7 +1999,7 @@
     <div class="form-group">
       <label class="control-label" for="person_id">138.申请人持有信用卡的数量</label>
       <div class="controls">
-          <input name="person_num_crebit" id="person_num_crebit" type="text" value="{{person_num_crebit}}" placeholder="{{person_num_crebit}}" class="form-control"/>
+          <input name="person_num_credit" id="person_num_credit" type="text" value="{{person_num_credit}}" placeholder="{{person_num_credit}}" class="form-control"/>
       </div>
     </div>
 
@@ -1379,7 +2033,7 @@
     <div class="form-group">
       <label class="control-label" for="person_id">140.配偶持有信用卡的数量</label>
       <div class="controls">
-          <input name="person_spouse_num_crebit" id="person_spouse_num_crebit" type="text" value="{{person_spouse_num_crebit}}" placeholder="{{person_spouse_num_crebit}}"  class="form-control"/>
+          <input name="person_spouse_num_credit" id="person_spouse_num_credit" type="text" value="{{person_spouse_num_credit}}" placeholder="{{person_spouse_num_credit}}"  class="form-control"/>
       </div>
     </div>
 
@@ -1609,6 +2263,86 @@
     </script>
 
     <div class="form-group">
+      <label class="control-label" for="person_id_type">153.申请人是否长期服用药物（请注明药物）</label>
+      <div class="controls">
+          <select name="person_if_drug" id="person_if_drug" class="form-control" value="{{person_if_drug}}">
+            <option value="是">是</option>
+            <option value="否">否</option>
+          </select>
+      </div>
+    </div>
+
+    <script>
+    var mySelect = document.getElementById('person_if_drug');
+    for(var i, j = 0; i = mySelect.options[j]; j++) {
+        if(i.value == "{{person_if_drug}}") {
+            mySelect.selectedIndex = j;
+            break;
+        }
+    }
+    </script>
+
+   <div class="form-group">
+      <label class="control-label" for="person_id_type">154.配偶是否长期服用药物（请注明药物）</label>
+      <div class="controls">
+          <select name="spouse_if_drug" id="spouse_if_drug" class="form-control" value="{{spouse_if_drug}}">
+            <option value="是">是</option>
+            <option value="否">否</option>
+          </select>
+      </div>
+    </div>
+
+    <script>
+    var mySelect = document.getElementById('spouse_if_drug');
+    for(var i, j = 0; i = mySelect.options[j]; j++) {
+        if(i.value == "{{spouse_if_drug}}") {
+            mySelect.selectedIndex = j;
+            break;
+        }
+    }
+    </script>
+
+   <div class="form-group">
+      <label class="control-label" for="person_id_type">155.申请人是否有过敏史（请注明过敏原）</label>
+      <div class="controls">
+          <select name="person_if_allergy" id="person_if_allergy" class="form-control" value="{{person_if_allergy}}">
+            <option value="是">是</option>
+            <option value="否">否</option>
+          </select>
+      </div>
+    </div>
+
+    <script>
+    var mySelect = document.getElementById('person_if_allergy');
+    for(var i, j = 0; i = mySelect.options[j]; j++) {
+        if(i.value == "{{person_if_allergy}}") {
+            mySelect.selectedIndex = j;
+            break;
+        }
+    }
+    </script>
+
+   <div class="form-group">
+      <label class="control-label" for="person_id_type">156.配偶是否是否有过敏史（请注明过敏原）</label>
+      <div class="controls">
+          <select name="spouse_if_allergy" id="spouse_if_allergy" class="form-control" value="{{spouse_if_allergy}}">
+            <option value="是">是</option>
+            <option value="否">否</option>
+          </select>
+      </div>
+    </div>
+
+    <script>
+    var mySelect = document.getElementById('spouse_if_allergy');
+    for(var i, j = 0; i = mySelect.options[j]; j++) {
+        if(i.value == "{{spouse_if_allergy}}") {
+            mySelect.selectedIndex = j;
+            break;
+        }
+    }
+    </script>
+
+    <div class="form-group">
       <label class="control-label" for="person_id_type">157.申请人是否有大病经历</label>
       <div class="controls">
           <select name="person_if_serious_ill" id="person_if_serious_ill" class="form-control" value="{{person_if_serious_ill}}" >
@@ -1627,6 +2361,18 @@
         }
     }
     </script>
+
+    <div class="form-group">
+        <label class="control-label" for="applicant_primary_school">158.申请人疾病</label>
+        <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:20%"><p>疾病</p></div>
+          <input name="person_ill" id="person_ill" type="text" value="{{person_ill}}"  class="form-control" style="width: 20%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:20%"><p>患病时间（XX年XX月）</p></div>
+          <input name="person_ill_time" id="person_ill_time" type="text" value="{{person_ill_time}}" placeholder="{{person_ill_time}}" class="form-control" style="width: 20%"/>
+        </div>
+      </div>
+
+
 
      <div class="form-group">
       <label class="control-label" for="person_id_type">159.配偶是否有大病经历</label>
@@ -1649,6 +2395,16 @@
     </script>
 
     <div class="form-group">
+        <label class="control-label" for="applicant_primary_school">160.配偶疾病</label>
+        <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:20%"><p>疾病</p></div>
+          <input name="spouse_ill" id="spouse_ill" type="text" value="{{spouse_ill}}"  class="form-control" style="width: 20%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:20%"><p>患病时间（XX年XX月）</p></div>
+          <input name="spouse_ill_time" id="spouse_ill_time" type="text" value="{{spouse_ill_time}}" placeholder="{{spouse_ill_time}}" class="form-control" style="width: 20%"/>
+        </div>
+    </div>
+
+    <div class="form-group">
       <label class="control-label" for="person_id_type">161.申请人是否有手术经历</label>
       <div class="controls">
           <select name="person_if_surgery" id="person_if_surgery" class="form-control" value="{{person_if_surgery}}" >
@@ -1669,6 +2425,16 @@
     </script>
 
     <div class="form-group">
+        <label class="control-label" for="applicant_primary_school">162.申请人手术</label>
+        <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:20%"><p>手术原因</p></div>
+          <input name="person_surgery" id="person_surgery" type="text" value="{{person_surgery}}"  class="form-control" style="width: 20%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:20%"><p>手术时间（XX年XX月）</p></div>
+          <input name="person_surgery_time" id="person_surgery_time" type="text" value="{{person_surgery_time}}" placeholder="{{person_surgery_time}}" class="form-control" style="width: 20%"/>
+        </div>
+    </div>
+
+    <div class="form-group">
       <label class="control-label" for="person_id_type">163.配偶是否有手术经历</label>
       <div class="controls">
           <select name="person_spouse_if_surgery" id="person_spouse_if_surgery" class="form-control" value="{{person_spouse_if_surgery}}">
@@ -1687,6 +2453,17 @@
         }
     }
     </script>
+
+    <div class="form-group">
+        <label class="control-label" for="applicant_primary_school">164.配偶手术</label>
+        <div class="controls" style="display: flex;">
+          <div style="padding-left: 25px; padding-top: 8px;width:20%"><p>手术原因</p></div>
+          <input name="spouse_surgery" id="spouse_surgery" type="text" value="{{spouse_surgery}}"  class="form-control" style="width: 20%"/>
+          <div style="padding-left: 25px; padding-top: 8px;width:20%"><p>手术时间（XX年XX月）</p></div>
+          <input name="spouse_surgery_time" id="spouse_surgery_time" type="text" value="{{spouse_surgery_time}}" placeholder="{{spouse_surgery_time}}" class="form-control" style="width: 20%"/>
+        </div>
+    </div>
+
 
     <div class="form-group">
       <label class="control-label" for="person_id_type">165.申请人是否吸烟</label>

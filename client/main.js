@@ -1,3 +1,3 @@
 $.cloudinary.config({
-	cloud_name:"dcyqpeqbh"
+	cloud_name:"zlabdata"
 })

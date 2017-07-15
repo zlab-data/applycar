@@ -27,4 +27,14 @@ if (typeof Meteor.users.findOne({username: 'daiyongfeng'}) === "undefined" ){
                                                                            //publicly visible fields like firstname goes here
                         }
   });
+};
+
+if (typeof Meteor.users.findOne({username: '君胜汽车金融'}) === "undefined" ){
+  Accounts.createUser({
+                           username: '君胜汽车金融',
+                           password : 'junsheng123',
+                           profile  : {
+                                                                           //publicly visible fields like firstname goes here
+                        }
+  });
 }

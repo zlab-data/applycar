@@ -1,168 +1,325 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+/****** LOGIN MODAL ******/
+.loginmodal-container {
+    padding: 30px;
+    max-width: 350px;
+    width: 100% !important;
+    background-color: #F7F7F7;
+    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    font-family: roboto;
+}
+
+.loginmodal-container h1 {
+    text-align: center;
+    font-size: 1.8em;
+    font-family: roboto;
+}
+
+.loginmodal-container input[type=submit] {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+    height: 44px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    /* border-radius: 2px; */
+    padding: 0 8px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+    border: 1px solid #b9b9b9;
+    border-top: 1px solid #a0a0a0;
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.loginmodal {
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    height: 36px;
+    padding: 0 8px;
+    /* border-radius: 3px; */
+    /* -webkit-user-select: none;
+      user-select: none; */
+}
+
+.loginmodal-submit {
+    /* border: 1px solid #3079ed; */
+    border: 0px;
+    color: #fff;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+    background-color: #4d90fe;
+    padding: 17px 0px;
+    font-family: roboto;
+    font-size: 14px;
+    /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.loginmodal-submit:hover {
+    /* border: 1px solid #2f5bb7; */
+    border: 0px;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    background-color: #357ae8;
+    /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.loginmodal-container a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 400;
+    text-align: center;
+    display: inline-block;
+    opacity: 0.6;
+    transition: opacity ease 0.5s;
+}
+
+.login-help {
+    font-size: 12px;
+}
+
 .grid-block, .main, .post, .comments li, .comment-form {
-  background: #fff;
-  border-radius: 3px;
-  padding: 10px;
-  margin-bottom: 10px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
+    background: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
 
 body {
-  background: #eee;
-  color: #666666; }
+    background: #eee;
+    color: #666666;
+}
 
 #main {
-  position: relative;
-}
-.page {
-  position: absolute;
-  top: 0px;
-  width: 100%;
+    position: relative;
 }
 
+.page {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
 
 .required {
-  color: red;
-  margin-left: 3px;
+    color: red;
+    margin-left: 3px;
 }
 
-
 .navbar {
-  margin-bottom: 10px; }
-  /* line 32, ../sass/style.scss */
-  .navbar .navbar-inner {
-    border-radius: 0px 0px 3px 3px; }
+    margin-bottom: 10px;
+}
+
+/* line 32, ../sass/style.scss */
+.navbar .navbar-inner {
+    border-radius: 0px 0px 3px 3px;
+}
 
 #spinner {
-  height: 300px; }
+    height: 300px;
+}
 
 .post {
-  /* For modern browsers */
-  /* For IE 6/7 (trigger hasLayout) */
-  *zoom: 1;
-  position: relative;
-  opacity: 1; }
-  .post:before, .post:after {
+    /* For modern browsers */
+    /* For IE 6/7 (trigger hasLayout) */
+    *zoom: 1;
+    position: relative;
+    opacity: 1;
+}
+
+.post:before, .post:after {
     content: "";
-    display: table; }
-  .post:after {
-    clear: both; }
-  .post.invisible {
-    opacity: 0; }
-  .post.instant {
+    display: table;
+}
+
+.post:after {
+    clear: both;
+}
+
+.post.invisible {
+    opacity: 0;
+}
+
+.post.instant {
     -webkit-transition: none;
     -moz-transition: none;
     -o-transition: none;
-    transition: none; }
-  .post.animate{
+    transition: none;
+}
+
+.post.animate {
     -webkit-transition: all 300ms 0ms;
     -moz-transition: all 300ms 0ms ease-in;
     -o-transition: all 300ms 0ms ease-in;
-    transition: all 300ms 0ms ease-in; }
-  .post .upvote {
+    transition: all 300ms 0ms ease-in;
+}
+
+.post .upvote {
     display: block;
     margin: 7px 12px 0 0;
-    float: left; }
-  .post .post-content {
-    float: left; }
-    .post .post-content h3 {
-      margin: 0;
-      line-height: 1.4;
-      font-size: 18px; }
-      .post .post-content h3 a {
-        display: inline-block;
-        margin-right: 5px; }
-      .post .post-content h3 span {
-        font-weight: normal;
-        font-size: 14px;
-        display: inline-block;
-        color: #aaaaaa; }
-    .post .post-content p {
-      margin: 0; }
-  .post .discuss {
+    float: left;
+}
+
+.post .post-content {
+    float: left;
+}
+
+.post .post-content h3 {
+    margin: 0;
+    line-height: 1.4;
+    font-size: 18px;
+}
+
+.post .post-content h3 a {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.post .post-content h3 span {
+    font-weight: normal;
+    font-size: 14px;
+    display: inline-block;
+    color: #aaaaaa;
+}
+
+.post .post-content p {
+    margin: 0;
+}
+
+.post .discuss {
     display: block;
     float: right;
-    margin-top: 7px; }
+    margin-top: 7px;
+}
 
 .comments {
-  list-style-type: none;
-  margin: 0; }
-  .comments li h4 {
+    list-style-type: none;
+    margin: 0;
+}
+
+.comments li h4 {
     font-size: 16px;
-    margin: 0; }
-    .comments li h4 .date {
-      font-size: 12px;
-      font-weight: normal; }
-    .comments li h4 a {
-      font-size: 12px; }
-  .comments li p:last-child {
-    margin-bottom: 0; }
+    margin: 0;
+}
+
+.comments li h4 .date {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.comments li h4 a {
+    font-size: 12px;
+}
+
+.comments li p:last-child {
+    margin-bottom: 0;
+}
 
 .dropdown-menu span {
-  display: block;
-  padding: 3px 20px;
-  clear: both;
-  line-height: 20px;
-  color: #bbb;
-  white-space: nowrap; }
-
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    line-height: 20px;
+    color: #bbb;
+    white-space: nowrap;
+}
 
 .load-more {
-  display: block;
-  border-radius: 3px;
-  background: rgba(0, 0, 0, 0.05);
-  text-align: center;
-  height: 60px;
-  line-height: 60px;
-  margin-bottom: 10px; }
-  .load-more:hover {
+    display: block;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.05);
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    margin-bottom: 10px;
+}
+
+.load-more:hover {
     text-decoration: none;
-    background: rgba(0, 0, 0, 0.1); }
-
-.posts .spinner-container{
-  position: relative;
-  height: 100px;
+    background: rgba(0, 0, 0, 0.1);
 }
 
-.jumbotron{
-  text-align: center;
+.posts .spinner-container {
+    position: relative;
+    height: 100px;
 }
-.jumbotron h2{
-  font-size: 60px;
-  font-weight: 100;
+
+.jumbotron {
+    text-align: center;
+}
+
+.jumbotron h2 {
+    font-size: 60px;
+    font-weight: 100;
 }
 
 @-webkit-keyframes fadeOut {
-  0% {opacity: 0;}
-  10% {opacity: 1;}
-  90% {opacity: 1;}
-  100% {opacity: 0;}
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @keyframes fadeOut {
-  0% {opacity: 0;}
-  10% {opacity: 1;}
-  90% {opacity: 1;}
-  100% {opacity: 0;}
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
-.errors{
-  position: fixed;
-  z-index: 10000;
-  padding: 10px;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  pointer-events: none;
+.errors {
+    position: fixed;
+    z-index: 10000;
+    padding: 10px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    pointer-events: none;
 }
+
 .alert {
-          animation: fadeOut 2700ms ease-in 0s 1 forwards;
-  -webkit-animation: fadeOut 2700ms ease-in 0s 1 forwards;
-     -moz-animation: fadeOut 2700ms ease-in 0s 1 forwards;
-  width: 250px;
-  float: right;
-  clear: both;
-  margin-bottom: 5px;
-  pointer-events: auto;
+    animation: fadeOut 2700ms ease-in 0s 1 forwards;
+    -webkit-animation: fadeOut 2700ms ease-in 0s 1 forwards;
+    -moz-animation: fadeOut 2700ms ease-in 0s 1 forwards;
+    width: 250px;
+    float: right;
+    clear: both;
+    margin-bottom: 5px;
+    pointer-events: auto;
 }

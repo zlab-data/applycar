@@ -132,7 +132,6 @@ Template.postSubmit.events({
       person_credit3_bank:$(e.target).find('[name=person_credit3_bank]').val(),
       person_credit3_num:$(e.target).find('[name=person_credit3_num]').val(),
       person_credit_total:$(e.target).find('[name=person_credit_total]').val(),
-      person_spouse_num_credit:$(e.target).find('[name=person_spouse_num_credit]').val(),
       spouse_credit1_bank:$(e.target).find('[name=spouse_credit1_bank]').val(),
       spouse_credit1_num:$(e.target).find('[name=spouse_credit1_num]').val(),
       spouse_credit2_bank:$(e.target).find('[name=spouse_credit2_bank]').val(),

@@ -2,10 +2,8 @@ Template.postEdit.events({
   'submit form': function(e) {
     e.preventDefault();
 
-    
-
-    var date = new Date();
-    var begun = moment(date).format("YYYY.MM.DD.hh.mm.ss");
+    let date = new Date();
+    let begun = moment(date).format("YYYY.MM.DD.hh.mm.ss");
     var previousProperties={
       //Done By Justin
       type_person_name:this.type_person_name,
@@ -41,7 +39,7 @@ Template.postEdit.events({
       parent_4_birthday:this.parent_4_birthday,
       parent_4_relation:this.parent_4_relation,
       person_child_num:this.person_child_num,
-      person_addr_type:this.person_addr_type,
+      // person_addr_type:this.person_addr_type,
       person_jobname_1:this.person_jobname_1,
       person_jobplace_1:this.person_jobplace_1,
       person_jobstart_1:this.person_jobstart_1,
@@ -87,7 +85,7 @@ Template.postEdit.events({
       person_marriage:this.person_marriage,
       person_if_son:this.person_if_son,
       person_if_driver_lisence:this.person_if_driver_lisence,
-      guarantor_company_type:this.guarantor_company_type,
+      // guarantor_company_type:this.guarantor_company_type,
       guarantor_company_industry:this.guarantor_company_industry,
       guarantor_job:this.guarantor_job,
       guarantor_post:this.guarantor_post,
@@ -319,7 +317,7 @@ Template.postEdit.events({
       //done by Justin
 
 
-    var postProperties = {
+    let postProperties = {
       //Done By Justin
       parent_disease:parent_disease,
       child_disease:child_disease,
@@ -383,7 +381,7 @@ Template.postEdit.events({
       parent_4_birthday:$(e.target).find('[name=parent_4_birthday]').val(),
       parent_4_relation:$(e.target).find('[name=parent_4_relation]').val(),
       person_child_num:$(e.target).find('[name=person_child_num]').val(),
-      person_addr_type:$(e.target).find('[name=person_addr_type]').val(),
+      // person_addr_type:$(e.target).find('[name=person_addr_type]').val(),
       person_jobname_1:$(e.target).find('[name=person_jobname_1]').val(),
       person_jobplace_1:$(e.target).find('[name=person_jobplace_1]').val(),
       person_jobstart_1:$(e.target).find('[name=person_jobstart_1]').val(),
@@ -613,17 +611,17 @@ Template.postEdit.events({
 
     
 
-    var front_image_file = $('#user_front_image')[0].files[0];
-    var side_image_file = $('#user_side_image')[0].files[0];
-    var hold_image_file = $('#user_hold_image')[0].files[0];
-    var car_front_image_file = $('#car_front_image')[0].files[0];
-    var car_back_image_file = $('#car_back_image')[0].files[0];
+    let front_image_file = $('#user_front_image')[0].files[0];
+    let side_image_file = $('#user_side_image')[0].files[0];
+    let hold_image_file = $('#user_hold_image')[0].files[0];
+    let car_front_image_file = $('#car_front_image')[0].files[0];
+    let car_back_image_file = $('#car_back_image')[0].files[0];
     //console.log(file)
-    var all_required=document.getElementsByClassName('required-field');
+    let all_required=document.getElementsByClassName('required-field');
     
-    var currentPostId = this._id;
-    var finish=true;
-    for (var i=0; i < all_required.length; i++){
+    let currentPostId = this._id;
+    let finish=true;
+    for (let i=0; i < all_required.length; i++){
       if (all_required[i].value.length===0){
         finish=false;
       }
@@ -696,7 +694,7 @@ Template.postEdit.events({
 
   'click .delete': function(e) {
     e.preventDefault();
-    var previousProperties={
+    let previousProperties={
        //Done By Justin
       parent_disease:this.parent_disease,
       child_disease:this.child_disease,
@@ -731,7 +729,7 @@ Template.postEdit.events({
       parent_4_birthday:this.parent_4_birthday,
       parent_4_relation:this.parent_4_relation,
       person_child_num:this.person_child_num,
-      person_addr_type:this.person_addr_type,
+      // person_addr_type:this.person_addr_type,
       person_jobname_1:this.person_jobname_1,
       person_jobplace_1:this.person_jobplace_1,
       person_jobstart_1:this.person_jobstart_1,
@@ -772,7 +770,7 @@ Template.postEdit.events({
       person_marriage:this.person_marriage,
       person_if_son:this.person_if_son,
       person_if_driver_lisence:this.person_if_driver_lisence,
-      guarantor_company_type:this.guarantor_company_type,
+      // guarantor_company_type:this.guarantor_company_type,
       guarantor_company_industry:this.guarantor_company_industry,
       guarantor_job:this.guarantor_job,
       guarantor_post:this.guarantor_post,
@@ -848,7 +846,7 @@ Template.postEdit.events({
       person_spouse_num_debit: this.person_spouse_num_debit,
       person_num_debit: this.person_num_debit,
       person_num_credit: this.person_num_credit,
-      person_spouse_num_credit: this.person_spouse_num_credit,
+      // person_spouse_num_credit: this.person_spouse_num_credit,
       person_if_loan: this.person_if_loan,
       person_loan_amount: this.person_loan_amount,
       person_loan_type: this.person_loan_type,
@@ -975,9 +973,9 @@ Template.postEdit.events({
       latest:false,
       deleted: true,
       edit_time: this.edit_time
-    }
+    };
     if (confirm("确定删除这份申请表吗?")) {
-      var currentPostId = this._id;
+      let currentPostId = this._id;
       Posts.update(currentPostId, {$set: previousProperties}, function(error) {
       if (error) {
         alert(error.reason);
@@ -993,10 +991,10 @@ Template.postEdit.events({
 
 Template.postEdit.helpers({
   getId: function(){
-    var result="http://res.cloudinary.com/dcyqpeqbh/image/upload/v1498217696/"+this._id+".jpg"
+    let result="http://res.cloudinary.com/dcyqpeqbh/image/upload/v1498217696/"+this._id+".jpg";
     return result
   }
-})
+});
 
 
     

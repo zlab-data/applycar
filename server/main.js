@@ -7,13 +7,10 @@ Meteor.startup(() => {
  		api_key:'287546948217581',
  		api_secret: 'dbq5a9wfGLooe1IKx57AMj0DFW0',
 
- 	}),
+ 	});
  	Accounts.config({
     	forbidClientAccountCreation: true
 	})
-
-	
- 	
 });
 
 

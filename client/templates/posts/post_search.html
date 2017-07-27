@@ -1,27 +1,75 @@
-
 <template name="postSearch">
+    <style>
+        .filterable {
+            margin-top: 15px;
+        }
+        .filterable .panel-heading .pull-right {
+            margin-top: -20px;
+        }
+        .filterable .filters input[disabled] {
+            background-color: transparent;
+            border: none;
+            cursor: auto;
+            box-shadow: none;
+            padding: 0;
+            height: auto;
+        }
+        .filterable .filters input[disabled]::-webkit-input-placeholder {
+            color: #333;
+        }
+        .filterable .filters input[disabled]::-moz-placeholder {
+            color: #333;
+        }
+        .filterable .filters input[disabled]:-ms-input-placeholder {
+            color: #333;
+        }
+    </style>
+
     <div class="form-group">
-      <label class="control-label" for="title">按姓名搜索</label>
-      <div class="controls">
-          <input name="SearchName" id="SearchName" type="text" value="" placeholder="输入你要搜索的姓名" class="form-control"/>
-      </div>
+        <label class="control-label" for="title">按姓名搜索</label>
+        <div class="controls">
+            <input name="SearchName" id="SearchName" type="text" value="" placeholder="输入你要搜索的姓名" class="form-control"/>
+        </div>
     </div>
-    <input type="submit" value="Search" class="name_btn btn btn-primary" />
+    <input type="submit" value="Search" class="name_btn btn btn-primary"/>
 
     <div class="form-group" style="margin-top: 2%">
-      <label class="control-label" for="title">按身份证号码搜索</label>
-      <div class="controls">
-          <input name="SearchId" id="SearchId" type="text" value="" placeholder="输入你要搜索的身份证号码" class="form-control"/>
-      </div>
+        <label class="control-label" for="title">按身份证号码搜索</label>
+        <div class="controls">
+            <input name="SearchId" id="SearchId" type="text" value="" placeholder="输入你要搜索的身份证号码" class="form-control"/>
+        </div>
     </div>
-    <input type="submit" value="Search" class="id_btn btn btn-primary" />
+    <input type="submit" value="Search" class="id_btn btn btn-primary"/>
 
-    <div id="info" style="display: block; margin-top: 5%">
-       {{#each getInfo}}
-          {{> postItem}}
-       {{/each}}
+    <div class="row">
+        <div class="panel panel-primary filterable">
+            <div class="panel-heading">
+                <h3 class="panel-title">用户信息列表</h3>
+                <div class="pull-right">
+                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span>
+                        Filter
+                    </button>
+                </div>
+            </div>
+            <table class="table table-hover">
+                <thead>
+                <tr class="filters">
+                    <th><input type="text" class="form-control" placeholder="客户姓名" disabled></th>
+                    <th><input type="text" class="form-control" placeholder="证件号码" disabled></th>
+                    <th><input type="text" class="form-control" placeholder="住址" disabled></th>
+                    <th><input type="text" class="form-control" placeholder="手机号码" disabled></th>
+                    <th><input type="text" class="form-control" placeholder="操作" disabled></th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each getInfo}}
+                    {{> postDetailItem}}
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
     </div>
-    
+
 </template>
 
 

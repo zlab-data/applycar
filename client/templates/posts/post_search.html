@@ -1,11 +1,14 @@
 <template name="postSearch">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <style>
         .filterable {
             margin-top: 15px;
         }
+
         .filterable .panel-heading .pull-right {
             margin-top: -20px;
         }
+
         .filterable .filters input[disabled] {
             background-color: transparent;
             border: none;
@@ -14,12 +17,15 @@
             padding: 0;
             height: auto;
         }
+
         .filterable .filters input[disabled]::-webkit-input-placeholder {
             color: #333;
         }
+
         .filterable .filters input[disabled]::-moz-placeholder {
             color: #333;
         }
+
         .filterable .filters input[disabled]:-ms-input-placeholder {
             color: #333;
         }
@@ -62,9 +68,15 @@
                 </tr>
                 </thead>
                 <tbody>
-                {{#each getInfo}}
-                    {{> postDetailItem}}
-                {{/each}}
+                {{#if isEmpty getInfo}}
+                    <tr class="no-result text-center">
+                        <td colspan="5">No result found</td>
+                    </tr>
+                {{else}}
+                    {{#each getInfo}}
+                        {{> postDetailItem}}
+                    {{/each}}
+                {{/if}}
                 </tbody>
             </table>
         </div>

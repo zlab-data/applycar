@@ -33,7 +33,7 @@ Template.postSearch.events({
         let $panel = $('.filterable'),
             $filters = $panel.find('.filters input'),
             $tbody = $panel.find('.table tbody');
-        if ($filters.prop('disabled') == true) {
+        if ($filters.prop('disabled') === true) {
             $filters.prop('disabled', false);
             $filters.first().focus();
         } else {
@@ -44,6 +44,33 @@ Template.postSearch.events({
     },
 
 
+    'keyup .filterable .filters input': function (e) {
+        /* Ignore tab key */
+        let code = e.keyCode || e.which;
+        if (code === '9') return;
+
+        /* Useful DOM data and selectors */
+        let $input = $(document.activeElement),
+            inputContent = $input.val().toLowerCase(),
+            $panel = $input.parents('.filterable'),
+            column = $panel.find('.filters th').index($input.parents('th')),
+            $table = $panel.find('.table'),
+            $rows = $table.find('tbody tr');
+        /* Dirtiest filter function ever ;) */
+        let $filteredRows = $rows.filter(function () {
+            let value = $(this).find('td').eq(column).text().toLowerCase();
+            return value.indexOf(inputContent) === -1;
+        });
+        /* Clean previous no-result if exist */
+        $table.find('tbody .no-result').remove();
+        /* Show all rows, hide filtered ones (never do that outside of a demo ! xD) */
+        $rows.show();
+        $filteredRows.hide();
+        /* Prepend no-result row if all rows are filtered */
+        if ($filteredRows.length === $rows.length) {
+            $table.find('tbody').prepend($('<tr class="no-result text-center"><td colspan="' + $table.find('.filters th').length + '">No result found</td></tr>'));
+        }
+    },
 });
 
 Template.postSearch.onCreated(function () {
@@ -54,7 +81,8 @@ Template.postSearch.helpers({
     getInfo() {
         return Session.get('searchArray');
     },
+
+    isEmpty: function (obj) {
+        return obj.length === 0;
+    }
 });
-
-
-

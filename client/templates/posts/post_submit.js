@@ -355,10 +355,13 @@ Template.postSubmit.events({
 
         if (person_name.value.length === 0) {
             alert("申请人姓名不能为空");
+            document.getElementsByName(['person_name'])[0].focus()
         } else if (person_id.value.length === 0) {
             alert("申请人身份证号不能为空");
+            document.getElementsByName(['person_id'])[0].focus()
         } else if ("undefined" === typeof front_image) {
             alert("请上传正面照片");
+            document.getElementById(['user_front_image']).focus()
         } else if ("undefined" === typeof side_image) {
             alert("请上传侧面照片");
         } else if ("undefined" === typeof hold_image) {

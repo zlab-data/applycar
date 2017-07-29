@@ -1,8 +1,22 @@
+import { Meteor } from 'meteor/meteor';
+
 Template.login.events({
-    'submit form': function(e) {
-        e.preventDefault();
+    'submit form': function(event) {
+        event.preventDefault();
         let username = event.target.username.value;
         let password = event.target.password.value;
-        Meteor.loginWithPassword(username, password);
+        Meteor.call('checkIfUserExists', username, function (err, result) {
+            if (result) {
+                Meteor.loginWithPassword(username, password, function (error) {
+                    if (error) {
+                        alert('密码错误');
+                    } else {
+                        alert('登陆成功');
+                    }
+                });
+            } else {
+                alert('用户名错误')
+            }
+        });
     }
 });

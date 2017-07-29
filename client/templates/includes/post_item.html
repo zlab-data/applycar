@@ -6,7 +6,7 @@
                 {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">编辑</a>{{/if}}
             </p>
         </div>
-        <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">详细资料</a>
+        <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default" target="_blank">详细资料</a>
     </div>
 </template>
 
@@ -17,8 +17,8 @@
         <td>{{person_address}}</td>
         <td>{{applicant_phone_num}}</td>
         <td>
-            <a href="{{pathFor 'postPage'}}">详情</a>
-            {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">编辑</a>{{/if}}
+            <a href="{{pathFor 'postPage'}}" target="_blank">详情</a>
+            {{#if ownPost}}<a href="{{pathFor 'postEdit'}}" target="_blank">编辑</a>{{/if}}
         </td>
     </tr>
 </template>

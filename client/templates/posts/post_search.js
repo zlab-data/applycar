@@ -3,9 +3,9 @@ Template.postSearch.events({
         let searchName = document.getElementsByName('SearchName')[0].value;
         if (searchName.length !== 0) {
             let keys_to_search = ['person_name', 'spouse_name', 'layer_name', 'emergency1_name', 'emergency2_name',
-                'parent_1_name', 'parent_2_name', 'parent_3_name', 'parent_4_name', 'child_1_name', 'child_2_name',
-                'child_3_name', 'guarantor_name'],
-            search_result = [];
+                    'parent_1_name', 'parent_2_name', 'parent_3_name', 'parent_4_name', 'child_1_name', 'child_2_name',
+                    'child_3_name', 'guarantor_name'],
+                search_result = [];
 
             keys_to_search.forEach(function (entry) {
                 let command = "search_result = search_result.concat(Posts.find({" + entry + ": '" + searchName + "', latest: true, deleted: false}).fetch());";
@@ -43,7 +43,10 @@ Template.postSearch.events({
                 console.log(command);
                 eval(command);
             });
-            Session.set('searchArray', Posts.find({person_id: searchName, latest: true, deleted: false}).fetch());
+
+            let uniq = a => [...new Set(a)];
+            // console.log(search_result);
+            Session.set('searchArray', uniq(search_result));
             let date = new Date();
             let begun = moment(date).format("YYYY.MM.DD.hh.mm.ss");
             let record = {

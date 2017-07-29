@@ -1,7 +1,18 @@
 Template.postSearch.events({
     'click .name_btn': function () {
         let searchName = document.getElementsByName('SearchName')[0].value;
-        Session.set('searchArray', Posts.find({person_name: searchName, latest: true, deleted: false}).fetch());
+        let keys_to_search = ['person_name', 'spouse_name', 'layer_name', 'emergency1_name', 'emergency2_name',
+                'parent_1_name', 'parent_2_name', 'parent_3_name', 'parent_4_name', 'child_1_name', 'child_2_name',
+                'child_3_name'],
+            search_result = [];
+
+        keys_to_search.forEach(function (entry) {
+            let command = "search_result = search_result.concat(Posts.find({" + entry + ": '" + searchName + "', latest: true, deleted: false}).fetch());";
+            console.log(command);
+            eval(command);
+        });
+        // console.log(search_result);
+        Session.set('searchArray', search_result);
 
         let date = new Date();
         let begun = moment(date).format("YYYY.MM.DD.hh.mm.ss");
@@ -74,7 +85,16 @@ Template.postSearch.events({
 });
 
 Template.postSearch.onCreated(function () {
-    Session.set('searchArray', Posts.find({latest: true, deleted: false}).fetch());
+    // console.log(Meteor.userId());
+    let user_id = Meteor.userId();
+    let posted_info = Posts.find({latest: true, deleted: false}).fetch(),
+        result = [];
+
+    posted_info.forEach(function (entry) {
+        if (entry['userId'] === user_id) result.push(entry);
+    });
+
+    Session.set('searchArray', result);
 });
 
 Template.postSearch.helpers({

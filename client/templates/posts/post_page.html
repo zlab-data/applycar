@@ -2,360 +2,853 @@
     <div><p style="font-size:30px; margin-left: 37%"><strong>个人车辆融资租赁申请表</strong></p></div>
 
     <p><strong>数据录入员姓名：</strong>{{type_person_name}}</p>
+    <style type="text/css">
+        .tg {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border-width: 1px;
+            border-style: solid;
+        }
 
-    <div><p><strong>本人正脸相片：</strong></p></div>
-    <img src="{{c.url get_front_image}}" style="height:200px; width: 160px">
+        .tg td {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            padding: 10px 5px;
+            /*border-style: hidden;*/
+            border-width: 1px;
+            overflow: hidden;
+            word-break: normal;
+        }
 
-    <div><p><strong>本人侧脸相片：</strong></p></div>
-    <img src="{{c.url get_side_image}}" style="height:200px; width: 160px">
+        .tg th {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            padding: 10px 5px;
+            /*border-style: hidden;*/
+            border-width: 1px;
+            overflow: hidden;
+            word-break: normal;
+        }
 
-    <div><p><strong>本人手持身份证相片：</strong></p></div>
-    <img src="{{c.url get_hold_image}}" style="height:200px; width: 160px">
+        .tg .tg-yw4l {
+            vertical-align: top;
+        }
+
+        img {
+            height: 200px;
+            width: 160px;
+        }
+
+        col {
+            width: 33%;
+        }
+    </style>
+
+
+    <table class="tg" style="table-layout: fixed; width: 100%">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <th class="tg-yw4l"><p><strong>本人正脸相片：</strong></p>
+                <img src="{{c.url get_front_image}}"></th>
+            <th class="tg-yw4l"><p><strong>本人侧脸相片：</strong></p>
+                <img src="{{c.url get_side_image}}"></th>
+            <th class="tg-yw4l"><p><strong>本人手持身份证相片：</strong></p>
+                <img src="{{c.url get_hold_image}}"></th>
+        </tr>
+    </table>
+
 
     <div class="form-group">
-        <label class="control-label" for="person_name" style="margin-top: 5%; font-size: 18px">第一部分.基本信息</label>
+        <label class="control-label" for="person_name" style="margin-top: 5%; font-size: 20px">第一部分.基本信息</label>
         <div>
-            <label class="control-label " for="person_name" style="font-size: 20px">一. 申请人信息</label>
+            <label class="control-label " for="person_name" style="font-size: 18px">一. 申请人信息</label>
         </div>
         <div>
-            <label class="control-label " for="person_name" style="font-size: 20px">(1)身份证信息</label>
-        </div>
-    </div>
-
-    <p><strong>4.姓名：</strong>{{person_name}}</p>
-    <p><strong>5.生日：</strong>{{person_birthday}}</p>
-    <p><strong>6.性别：</strong>{{person_gender}}</p>
-    <p><strong>7.证件类型：</strong>{{person_id_type}}</p>
-    <p><strong>8.证件号码：</strong>{{person_id}}</p>
-    <p><strong>9.发证机关：</strong>{{person_id_issuer}}</p>
-    <p><strong>10.证件有效截止期间:</strong>{{person_id_issuer_date}}</p>
-    <p><strong>11.申请人手机号码：</strong>{{applicant_phone_num}}</p>
-    <p><strong>12.本号码开始使用时间：</strong>{{applicant_phone_num_starting_date}}</p>
-    <p><strong>13.家庭住址 (请具体到门牌号或者房间号)：</strong>{{person_address}}</p>
-    <div class="form-group">
-        <label class="control-label" for="person_name" style="font-size: 20px">(2)户口本信息</label>
-    </div>
-    <p><strong>14.出生地 (xx省xx市)：</strong>{{person_birth_place}}</p>
-    <p><strong>15.户籍所在地：</strong>{{person_addr_place}}</p>
-    <p><strong>16.户籍属性：</strong>{{person_addr_type}}</p>
-    <p><strong>17.身高(cm)：</strong>{{person_height}}</p>
-    <p><strong>18.教育水平：</strong>{{person_education_level}}</p>
-    <p><strong>19.婚姻状况：</strong>{{person_marriage}}</p>
-    <p><strong>20.是否有子女：</strong>{{person_if_son}}</p>
-    <p><strong>21.子女数量：</strong>{{person_child_num}}</p>
-    <p><strong>22.子女1：姓名</strong>{{child_1_name}}    <strong>性别</strong>{{child_1_gender}}
-        <strong>出生日期</strong>{{child_1_birthday}}</p>
-    <p><strong>子女2：姓名</strong>{{child_2_name}}    <strong>性别</strong>{{child_2_gender}}
-        <strong>出生日期</strong>{{child_2_birthday}}</p>
-    <p><strong>子女3：姓名</strong>{{child_3_name}}    <strong>性别</strong>{{child_3_gender}}
-        <strong>出生日期</strong>{{child_3_birthday}}</p>
-    <div class="form-group">
-        <label class="control-label" for="person_name" style="font-size: 20px">(3)驾驶证信息</label>
-    </div>
-    <p><strong>23.是否持有驾照：</strong>{{person_if_driver_lisence}}</p>
-    <p><strong>24.驾照类型:</strong>{{person_license_type}}</p>
-    <p><strong>25.驾照号码:</strong>{{person_license_num}}</p>
-    <p><strong>26.驾照发证时间（XX年XX月）:</strong>{{person_license_issue_date}}</p>
-    <p><strong>27.驾照有效期截止时间（XX年XX月）:</strong>{{person_license_due}}</p>
-    <div class="form-group">
-        <label class="control-label" for="person_name" style="font-size: 20px">(4)工资条信息</label>
-    </div>
-    <p><strong>28.每月收入:</strong>{{person_income_month}}</p>
-    <p><strong>29.单位名称:</strong>{{person_company}}</p>
-    <p><strong>30.单位电话:</strong>{{person_company_phone}}</p>
-    <p><strong>31.单位地址:</strong>{{person_company_addr}}</p>
-    <p><strong>32.单位经济性质:</strong>{{person_company_type}}</p>
-    <p><strong>33.所属行业:</strong>{{person_company_industry}}</p>
-    <p><strong>34.职业:</strong>{{person_job}}</p>
-    <p><strong>35.职务:</strong>{{person_post}}</p>
-
-    <div>
-        <label class="control-label " for="person_name" style="font-size: 20px">二. 配偶信息</label>
-    </div>
-
-    <div>
-        <label class="control-label " for="person_name" style="font-size: 20px">(1)身份证信息</label>
-    </div>
-    <p><strong>36.配偶姓名:</strong>{{spouse_name}}</p>
-    <p><strong>37.出生日期:</strong>{{spouse_birthday}}</p>
-    <p><strong>38.证件类型:</strong>{{spouse_id_type}}</p>
-    <p><strong>39.发证机关:</strong>{{spouse_id_issuer}}</p>
-    <p><strong>40.证件有效截止期间（XX年XX月）:</strong>{{spouse_id_issuer_date}}</p>
-    <p><strong>41.证件号码:</strong>{{spouse_id}}</p>
-    <div class="form-group">
-        <label class="control-label" for="person_name" style="font-size: 20px">(2)户口本信息</label>
-    </div>
-    <p><strong>42.出生地 (xx省xx市):</strong>{{spouse_birth_place}}</p>
-    <p><strong>43.户籍所在地:</strong>{{spouse_addr_place}}</p>
-    <p><strong>44.户籍属性:</strong>{{spouse_addr_type}}</p>
-    <p><strong>45.教育水平:</strong>{{spouse_education_level}}</p>
-    <p><strong>46.身高:</strong>{{spouse_height}}</p>
-    <p><strong>47.配偶手机号码：</strong>{{spouse_phone_num}}</p>
-    <p><strong>48.本号码开始使用时间：</strong>{{spouse_phone_num_starting_date}}</p>
-    <div class="form-group">
-        <label class="control-label" for="person_name" style="font-size: 20px">(3)驾驶证信息</label>
-    </div>
-    <p><strong>49.是否持有驾照：</strong>{{spouse_if_driver_lisence}}</p>
-    <p><strong>50.驾照类型：</strong>{{spouse_license_type}}</p>
-    <p><strong>51.驾照号码：</strong>{{spouse_license_num}}</p>
-    <p><strong>52.驾照发证时间：</strong>{{spouse_license_issue_date}}</p>
-    <p><strong>53.驾照有效期截止时间：</strong>{{spouse_license_due}}</p>
-    <div class="form-group">
-        <label class="control-label" for="person_name" style="font-size: 20px">(4)工资条信息</label>
-    </div>
-
-    <p><strong>54.每月收入：</strong>{{spouse_income_month}}</p>
-    <p><strong>55.单位名称：</strong>{{spouse_company}}</p>
-    <p><strong>56.单位电话：</strong>{{spouse_company_phone}}</p>
-    <p><strong>57.单位地址：</strong>{{spouse_company_addr}}</p>
-    <p><strong>58.单位经济性质：</strong>{{spouse_company_type}}</p>
-    <p><strong>59.所属行业：</strong>{{spouse_company_industry}}</p>
-    <p><strong>60.职业：</strong>{{spouse_job}}</p>
-    <p><strong>61.职务：</strong>{{spouse_post}}</p>
-    <div>
-        <label class="control-label " for="person_name" style="font-size: 20px">三. 担保人信息</label>
-    </div>
-
-    <div>
-        <label class="control-label " for="person_name" style="font-size: 20px">(1)身份证信息</label>
-    </div>
-    <p><strong>62.担保人姓名：</strong>{{guarantor_name}}</p>
-    <p><strong>63.性别：</strong>{{guarantor_gender}}</p>
-    <p><strong>64.生日：</strong>{{guarantor_birthday}}</p>
-    <p><strong>65.证件类型：</strong>{{guarantor_id_type}}</p>
-    <p><strong>66.证件号码：</strong>{{guarantor_id}}</p>
-    <p><strong>67.发证机关：</strong>{{guarantor_id_issuer}}</p>
-    <p><strong>68.证件有效截止期间：</strong>{{guarantor_id_issuer_date}}</p>
-    <p><strong>69.家庭住址 (请具体到门牌号或者房间号)：</strong>{{guarantor_address}}</p>
-    <div class="form-group">
-        <label class="control-label" for="person_name" style="font-size: 20px">(2)工资条信息</label>
-    </div>
-    <p><strong>70.担保人单位名称：</strong>{{guarantor_company}}</p>
-    <p><strong>71.每月收入：</strong>{{guarantor_income_month}}</p>
-    <p><strong>72.单位电话：</strong>{{guarantor_company_phone}}</p>
-    <p><strong>73.单位地址：</strong>{{guarantor_company_addr}}</p>
-    <p><strong>74.单位经济性质：</strong>{{guarantor_company_type}}</p>
-    <p><strong>75.所属行业：</strong>{{guarantor_company_industry}}</p>
-    <p><strong>76.职业：</strong>{{guarantor_job}}</p>
-    <p><strong>77.职务：</strong>{{guarantor_post}}</p>
-    <div class="form-group">
-        <label class="control-label" for="person_name" style="font-size: 20px">(3)补充信息</label>
-    </div>
-    <p><strong>78.担保人与申请人关系：</strong>{{guarantor_relationship}}</p>
-    <p><strong>79.与申请人首次认识时间（XX年XX月）：</strong>{{guarantor_first_meet}}</p>
-
-    <div>
-        <label class="control-label " for="person_name" style="font-size: 20px">四. 紧急联系人信息</label>
-    </div>
-    <p><strong>80.紧急联系人1：</strong>{{emergency1_name}}</p>
-    <p><strong>81.与申请人关系：</strong>{{emergency1_relationship}}</p>
-    <p><strong>82.手机号码：</strong>{{emergency1_contact}}</p>
-    <p><strong>82.紧急联系人2：</strong>{{emergency2_name}}</p>
-    <p><strong>84.与申请人关系：</strong>{{emergency2_relationship}}</p>
-    <p><strong>85.手机号码：</strong>{{emergency2_contact}}</p>
-
-    <div class="form-group">
-        <label class="control-label" for="person_name" style="margin-top: 5%; font-size: 18px">第二部分.教育信息</label>
-        <div>
-            <label class="control-label " for="person_name" style="font-size: 20px">一. 申请人教育信息</label>
+            <label class="control-label " for="person_name" style="font-size: 18px">(1)身份证信息</label>
         </div>
     </div>
 
+    <table class="tg" style="table-layout: fixed; width: 100%">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <td class="tg-yw4l"><strong>4.姓名：</strong>{{person_name}}</td>
+            <td class="tg-yw4l"><strong>5.生日：</strong>{{person_birthday}}</td>
+            <td class="tg-yw4l"><strong>6.性别：</strong>{{person_gender}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>7.证件类型：</strong>{{person_id_type}}</td>
+            <td class="tg-yw4l"><strong>8.证件号码：</strong>{{person_id}}</td>
+            <td class="tg-yw4l"><strong>9.发证机关：</strong>{{person_id_issuer}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>10.证件有效截止期间:</strong>{{person_id_issuer_date}}</td>
+            <td class="tg-yw4l"><strong>11.申请人手机号码：</strong>{{applicant_phone_num}}</td>
+            <td class="tg-yw4l"><strong>12.本号码开始使用时间：</strong>{{applicant_phone_num_starting_date}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l" colspan="3"><strong>13.家庭住址 (请具体到门牌号或者房间号)：</strong>{{person_address}}</td>
+        </tr>
+    </table>
 
-    <p><strong>86.申请人教育信息</strong></p>
-    <p><strong>申请人小学校名</strong> {{applicant_primary_school}}  <strong>申请人小学入学年份：</strong>{{applicant_primary_start}}</p>
-    <p><strong>申请人初中校名：</strong>{{applicant_middle_school}}  <strong>申请人初中入学年份：</strong>{{applicant_middle_start}}</p>
-    <p><strong>申请人高中/中专校名：</strong>{{applicant_high_school}}  <strong>申请人高中/中专入学年份：</strong>{{applicant_high_start}}</p>
-    <p><strong>申请人大学校名：</strong>{{applicant_undergraduate}}
-        <strong>申请人大学入学年份：</strong>{{applicant_undergraduate_start}}</p>
-    <p><strong>申请人研究生校名：</strong>{{applicant_master}}  <strong>申请人研究生入学年份：</strong>{{applicant_master_start}}</p>
+    <div class="form-group">
+        <label class="control-label" for="person_name" style="font-size: 18px">(2)户口本信息</label>
+    </div>
+
+    <table class="tg" style="table-layout: fixed; width: 100%">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <td class="tg-yw4l"><strong>14.出生地 (xx省xx市)：</strong>{{person_birth_place}}</td>
+            <td class="tg-yw4l"><strong>15.户籍所在地：</strong>{{person_addr_place}}</td>
+            <td class="tg-yw4l"><strong>16.户籍属性：</strong>{{person_addr_type}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>17.身高(cm)：</strong>{{person_height}}</td>
+            <td class="tg-yw4l"><strong>18.教育水平：</strong>{{person_education_level}}</td>
+            <td class="tg-yw4l"><strong>19.婚姻状况：</strong>{{person_marriage}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>20.是否有子女：</strong>{{person_if_son}}</td>
+            <td class="tg-yw4l"><strong>21.子女数量：</strong>{{person_child_num}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>22.子女1：姓名</strong>{{child_1_name}}</td>
+            <td class="tg-yw4l"><strong>性别</strong>{{child_1_gender}}</td>
+            <td class="tg-yw4l"><strong>出生日期</strong>{{child_1_birthday}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>子女2：姓名</strong>{{child_2_name}}</td>
+            <td class="tg-yw4l"><strong>性别</strong>{{child_2_gender}}</td>
+            <td class="tg-yw4l"><strong>出生日期</strong>{{child_2_birthday}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>子女3：姓名</strong>{{child_3_name}}</td>
+            <td class="tg-yw4l"><strong>性别</strong>{{child_3_gender}}</td>
+            <td class="tg-yw4l"><strong>出生日期</strong>{{child_3_birthday}}</td>
+        </tr>
+    </table>
+
+    <div class="form-group">
+        <label class="control-label" for="person_name" style="font-size: 18px">(3)驾驶证信息</label>
+    </div>
+
+    <table class="tg" style="table-layout: fixed; width: 100%">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <td class="tg-yw4l"><strong>23.是否持有驾照：</strong>{{person_if_driver_lisence}}</td>
+            <td class="tg-yw4l"><strong>24.驾照类型:</strong>{{person_license_type}}</td>
+            <td class="tg-yw4l"><strong>25.驾照号码:</strong>{{person_license_num}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>26.驾照发证时间:</strong>{{person_license_issue_date}}</td>
+            <td class="tg-yw4l"><strong>27.驾照有效期截止时间:</strong>{{person_license_due}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+    </table>
+
+    <div class="form-group">
+        <label class="control-label" for="person_name" style="font-size: 18px">(4)工资条信息</label>
+    </div>
+
+    <table class="tg" style="table-layout: fixed; width: 100%">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <td class="tg-yw4l"><strong>28.每月收入:</strong>{{person_income_month}}</td>
+            <td class="tg-yw4l"><strong>29.单位名称:</strong>{{person_company}}</td>
+            <td class="tg-yw4l"><strong>30.单位电话:</strong>{{person_company_phone}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l" colspan="2"><strong>31.单位地址:</strong>{{person_company_addr}}</td>
+            <td class="tg-yw4l"><strong>32.单位经济性质:</strong>{{person_company_type}}</td>
+        </tr>
+        <tr>
+
+            <td class="tg-yw4l"><strong>33.所属行业:</strong>{{person_company_industry}}</td>
+            <td class="tg-yw4l"><strong>34.职业:</strong>{{person_job}}</td>
+            <td class="tg-yw4l"><strong>35.职务:</strong>{{person_post}}</td>
+        </tr>
+    </table>
+
     <div>
-        <label class="control-label " for="person_name" style="font-size: 20px">二. 配偶教育信息</label>
-    </div>
-    <p><strong>87.配偶教育信息</strong></p>
-    <p><strong>配偶小学校名：</strong>{{applicant_primary_school}}  <strong>配偶小学入学年份：</strong>{{spouse_primary_start}}</p>
-    <p><strong>配偶初中校名：</strong>{{spouse_middle_school}}  <strong>配偶初中入学年份：</strong>{{spouse_middle_start}}</p>
-    <p><strong>配偶高中/中专校名：</strong>{{spouse_high_school}}  <strong>配偶高中/中专入学年份：</strong>{{spouse_high_start}}</p>
-    <p><strong>配偶大学校名：</strong>{{spouse_undergraduate}}  <strong>配偶大学入学年份：</strong>{{spouse_undergraduate_start}}</p>
-    <p><strong>配偶研究生校名：</strong>{{spouse_master}}  <strong>配偶研究生入学年份：</strong>{{spouse_master_start}}</p>
-    <div class="form-group">
-        <label class="control-label" for="person_name" style="margin-top: 5%; font-size: 18px">第三部分.工作信息</label>
-    </div>
-    <p><strong>88.申请人工作履历：</strong></p>
-    <p><strong>单位名称</strong> {{person_jobname_1}} <strong>所在省份城市</strong> {{person_jobplace_1}}
-        <strong>起始时间</strong> {{person_jobstart_1}} <strong>结束时间</strong> {{person_jobend_1}} </p>
-    <p><strong>单位名称</strong> {{person_jobname_2}} <strong>所在省份城市</strong> {{person_jobplace_2}}
-        <strong>起始时间</strong> {{person_jobstart_2}} <strong>结束时间</strong> {{person_jobend_2}} </p>
-    <p><strong>单位名称</strong> {{person_jobname_3}} <strong>所在省份城市</strong> {{person_jobplace_3}}
-        <strong>起始时间</strong> {{person_jobstart_3}} <strong>结束时间</strong> {{person_jobend_3}} </p>
-
-    <p><strong>89.配偶工作履历：</strong></p>
-    <p><strong>单位名称</strong> {{spouse_jobname_1}} <strong>所在省份城市</strong> {{spouse_jobplace_1}}
-        <strong>起始时间</strong> {{spouse_jobstart_1}} <strong>结束时间</strong> {{spouse_jobend_1}} </p>
-    <p><strong>单位名称</strong> {{spouse_jobname_2}} <strong>所在省份城市</strong> {{spouse_jobplace_2}}
-        <strong>起始时间</strong> {{spouse_jobstart_2}} <strong>结束时间</strong> {{spouse_jobend_2}} </p>
-    <p><strong>单位名称</strong> {{spouse_jobname_3}} <strong>所在省份城市</strong> {{spouse_jobplace_3}}
-        <strong>起始时间</strong> {{spouse_jobstart_3}} <strong>结束时间</strong> {{spouse_jobend_3}} </p>
-
-    <p><strong>90.申请人职称：</strong>{{applicant_title}}</p>
-    <p><strong>91.配偶职称：</strong>{{spouse_title}}</p>
-    <p><strong>92.申请人从业资格证：</strong>{{applicant_certificate}}</p>
-    <p><strong>93.配偶从业资格证：</strong>{{spouse_certificate}}</p>
-    <div class="form-group">
-        <label class="control-label" for="person_name" style="margin-top: 5%; font-size: 18px">第四部分.家庭信息</label>
+        <label class="control-label " for="person_name" style="font-size: 18px">二. 配偶信息</label>
     </div>
 
-    <p><strong>94.家庭每月开支：</strong>{{family_expense}}</p>
-    <p><strong>95.家庭拥有住宅数量：</strong>{{family_house}}</p>
-    <p><strong>96.住宅状况：</strong>{{house_type}}</p>
-    <p><strong>97.房贷每月还款：</strong>{{repayment}}</p>
-    <p><strong>98.每月房租：</strong>{{house_rent}}</p>
-    <p><strong>99.入住日期：</strong>{{check_in_date}}</p>
-    <p><strong>100.子女学费总额（每年）：</strong>{{children_tuition}}</p>
-    <p><strong>101.子女是否患有以下疾病(多选题)：</strong>{{child_disease}}</p>
+    <div>
+        <label class="control-label " for="person_name" style="font-size: 18px">(1)身份证信息</label>
+    </div>
 
-    <p><strong>102.是否与老人同住：</strong>{{live_with_parent}}</p>
-    <p><strong>103.同住老人： 老人姓名</strong>{{parent_1_name}} <strong>出生日期</strong>{{parent_1_birthday}}
-        <strong>与申请人关系</strong>{{parent_1_relation}}
-    </p>
-    <p><strong>老人姓名</strong>{{parent_2_name}} <strong>出生日期</strong>{{parent_2_birthday}}
-        <strong>与申请人关系</strong>{{parent_2_relation}}
-    </p>
-    <p><strong>老人姓名</strong>{{parent_3_name}} <strong>出生日期</strong>{{parent_3_birthday}}
-        <strong>与申请人关系</strong>{{parent_3_relation}}
-    </p>
-
-    <p><strong>104.老人是否患有以下疾病(多选题)：</strong>{{parent_disease}}</p>
-
-    <p><strong>105.申请人是否持有护照：</strong>{{applicant_passport}}</p>
-    <p><strong>106.配偶是否持有护照：</strong>{{spouse_passport}}</p>
-    <p><strong>107.申请人是否有出国/出境经历：</strong>{{applicant_go_abroad}}</p>
-    <p><strong>108.配偶是否有出国/出境经历：</strong>{{spouse_go_abroad}}</p>
-    <p><strong>109.申请人最近一次去过的国家：</strong>{{applicant_country}}</p>
-    <p><strong>110.配偶最近一次去过的国家：</strong>{{spouse_country}}</p>
-    <p><strong>111.申请人是否有五险一金</strong>{{person_insurance}}</p>
-    <p><strong>112.配偶是否有五险一金</strong>{{spouse_insurance}}</p>
-
-    <p><strong>113.申请人是否每周阅读纸质报纸：</strong>{{applicant_newspaper}}</p>
-    <p><strong>114.申请人每天查看并回复：</strong>{{person_read_reply}}</p>
-    <p><strong>115.申请人是否认识律师：</strong>{{applicant_lawyer}}</p>
-    <p><strong>116.您所认识的律师姓名：</strong>{{layer_name}}  <strong>您所认识的律师电话：</strong>{{layer_phone_num}}</p>
+    <table class="tg" style="table-layout: fixed; width: 100%">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <td class="tg-yw4l"><strong>36.配偶姓名:</strong>{{spouse_name}}</td>
+            <td class="tg-yw4l"><strong>37.出生日期:</strong>{{spouse_birthday}}</td>
+            <td class="tg-yw4l"><strong>38.证件类型:</strong>{{spouse_id_type}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>39.发证机关:</strong>{{spouse_id_issuer}}</td>
+            <td class="tg-yw4l"><strong>40.证件有效截止期间（XX年XX月）:</strong>{{spouse_id_issuer_date}}</td>
+            <td class="tg-yw4l"><strong>41.证件号码:</strong>{{spouse_id}}</td>
+        </tr>
+    </table>
 
     <div class="form-group">
-        <label class="control-label" for="person_name" style="margin-top: 5%; font-size: 18px">第五部分.金融信息</label>
+        <label class="control-label" for="person_name" style="font-size: 18px">(2)户口本信息</label>
     </div>
-    <p><strong>117.申请人年收入：</strong>{{applicant_income}}</p>
-    <p><strong>118.申请人固定收入/薪水是否超过总收入70%：</strong>{{person_inc_str}}</p>
-    <p><strong>119.配偶年收入：</strong>{{spouse_income}}</p>
-    <p><strong>120.配偶固定收入/薪水是否超过总收入70%：</strong>{{person_spouse_inc_str}}</p>
-    <p><strong>121.申请人是否有股票等金融产品交易账户：</strong>{{person_if_finance}}</p>
-    <p><strong>122.申请人股票等金融产品投资总额：</strong>{{person_finance_invest}}</p>
 
-    <p><strong>123.申请人持有储蓄卡的数量:</strong>{{person_num_debit}}</p>
-    <p><strong>124.申请人</strong></p>
-    <p><strong>储蓄卡1：</strong>{{person_debit1_bank}} <strong>卡号：</strong>{{person_debit1_num}}</p>
-    <p><strong>储蓄卡2：</strong>{{person_debit2_bank}} <strong>卡号：</strong>{{person_debit2_num}}</p>
-    <p><strong>储蓄卡3：</strong>{{person_debit3_bank}} <strong>卡号：</strong>{{person_debit3_num}}</p>
-
-    <p><strong>125.配偶持有储蓄卡的数量</strong>{{person_spouse_num_debit}}</p>
-    <p><strong>126.配偶</strong></p>
-    <p><strong>储蓄卡1：</strong>{{spouse_debit1_bank}} <strong>卡号：</strong>{{spouse_debit1_num}}</p>
-    <p><strong>储蓄卡2：</strong>{{spouse_debit2_bank}} <strong>卡号：</strong>{{spouse_debit2_num}}</p>
-    <p><strong>储蓄卡3：</strong>{{spouse_debit3_bank}} <strong>卡号：</strong>{{spouse_debit3_num}}</p>
-
-    <p><strong>127.申请人持有信用卡的数量</strong>{{person_num_credit}}</p>
-    <p><strong>128.申请人</strong></p>
-    <p><strong>信用卡1：</strong>{{person_credit1_bank}} <strong>授信额度：</strong>{{person_credit1_num}}</p>
-    <p><strong>信用卡2：</strong>{{person_credit2_bank}} <strong>授信额度：</strong>{{person_credit2_num}}</p>
-    <p><strong>信用卡3：</strong>{{person_credit3_bank}} <strong>授信额度：</strong>{{person_credit3_num}}</p>
-    <p><strong>授信额度总计：</strong>{{person_credit_total}}</p>
-
-    <p><strong>129.配偶持有信用卡的数量</strong>{{person_spouse_num_credit}}</p>
-    <p><strong>130.配偶</strong></p>
-    <p><strong>信用卡1：</strong>{{spouse_credit1_bank}} <strong>授信额度：</strong>{{spouse_credit1_num}}</p>
-    <p><strong>信用卡2：</strong>{{spouse_credit2_bank}} <strong>授信额度：</strong>{{spouse_credit2_num}}</p>
-    <p><strong>信用卡3：</strong>{{spouse_credit3_bank}} <strong>授信额度：</strong>{{spouse_credit3_num}}</p>
-    <p><strong>授信额度总计：</strong>{{spouse_credit_total}}</p>
-
-    <p><strong>131.是否有家庭贷款：</strong>{{person_if_loan}}</p>
-    <p><strong>132.家庭贷款总额：</strong>{{person_loan_amount}}</p>
-    <p><strong>133.家庭贷款类别：</strong>{{person_loan_type}}</p>
-    <p><strong>134.申请人是否支付宝，微信支付等网络支付系统：</strong>{{person_if_epay}}</p>
-    <p><strong>135.配偶人是否支付宝，微信支付等网络支付系统：</strong>{{person_spouse_if_epay}}</p>
+    <table class="tg" style="table-layout: fixed; width:100%">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <td class="tg-yw4l"><strong>42.出生地 (xx省xx市):</strong>{{spouse_birth_place}}</td>
+            <td class="tg-yw4l"><strong>43.户籍所在地:</strong>{{spouse_addr_place}}</td>
+            <td class="tg-yw4l"><strong>44.户籍属性:</strong>{{spouse_addr_type}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>45.教育水平:</strong>{{spouse_education_level}}</td>
+            <td class="tg-yw4l"><strong>46.身高:</strong>{{spouse_height}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>47.配偶手机号码：</strong>{{spouse_phone_num}}</td>
+            <td class="tg-yw4l"><strong>48.本号码开始使用时间：</strong>{{spouse_phone_num_starting_date}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+    </table>
 
     <div class="form-group">
-        <label class="control-label" for="person_name" style="margin-top: 5%; font-size: 18px">第六部分.车辆讯息(以下信息由经销商汽车金融专员填写)</label>
+        <label class="control-label" for="person_name" style="font-size: 18px">(3)驾驶证信息</label>
     </div>
-    <div><p><strong>136.汽车正面相片：</strong></p></div>
-    <img src="{{c.url get_car_front_image}}" style="height:200px; width: 160px">
 
-    <div><p><strong>137.汽车背面相片：</strong></p></div>
-    <img src="{{c.url get_car_back_image}}" style="height:200px; width: 160px">
-
-
-    <p><strong>138.品牌：</strong>{{car_brand}}</p>
-    <p><strong>139.车型：</strong>{{motorcycle_type}}</p>
-    <p><strong>140.车辆价格：</strong>{{car_price}}</p>
-    <p><strong>141.保险费：</strong>{{insurance_expense}}</p>
-    <p><strong>142.首付金额：</strong>{{down_payment}}</p>
-    <p><strong>143.首付比例：</strong>{{down_payment_percentage}}</p>
-    <p><strong>144.融资金额：</strong>{{loan_value}}</p>
-    <p><strong>145.融资期限：</strong>{{loan_term}}</p>
-    <p><strong>146.车辆颜色：</strong>{{car_color}}</p>
-    <p><strong>147.车架号：</strong>{{car_id}}</p>
-    <p><strong>148.发动机号：</strong>{{engine_num}}</p>
+    <table class="tg" style="table-layout: fixed; width: 100%">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <td class="tg-yw4l"><strong>49.是否持有驾照：</strong>{{spouse_if_driver_lisence}}</td>
+            <td class="tg-yw4l"><strong>50.驾照类型：</strong>{{spouse_license_type}}</td>
+            <td class="tg-yw4l"><strong>51.驾照号码：</strong>{{spouse_license_num}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>52.驾照发证时间：</strong>{{spouse_license_issue_date}}</td>
+            <td class="tg-yw4l"><strong>53.驾照有效期截止时间：</strong>{{spouse_license_due}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"></td>
+            <td class="tg-yw4l"></td>
+            <td class="tg-yw4l"></td>
+        </tr>
+    </table>
 
     <div class="form-group">
-        <label class="control-label" for="person_name" style="margin-top: 5%; font-size: 18px">第七部分.健康信息</label>
+        <label class="control-label" for="person_name" style="font-size: 18px">(4)工资条信息</label>
     </div>
 
+    <table class="tg" style="table-layout: fixed; width: 100%">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <td class="tg-yw4l"><strong>54.每月收入：</strong>{{spouse_income_month}}</td>
+            <td class="tg-yw4l"><strong>55.单位名称：</strong>{{spouse_company}}</td>
+            <td class="tg-yw4l"><strong>56.单位电话：</strong>{{spouse_company_phone}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l" colspan="2"><strong>57.单位地址：</strong>{{spouse_company_addr}}</td>
+            <td class="tg-yw4l"><strong>58.单位经济性质：</strong>{{spouse_company_type}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>59.所属行业：</strong>{{spouse_company_industry}}</td>
+            <td class="tg-yw4l"><strong>60.职业：</strong>{{spouse_job}}</td>
+            <td class="tg-yw4l"><strong>61.职务：</strong>{{spouse_post}}</td>
+        </tr>
+    </table>
 
-    <p><strong>149.申请人近视度数（不近视请填0）：</strong>{{person_shortsight}}</p>
-    <p><strong>150.配偶近视度数（不近视请填0）：</strong>{{person_spouse_shortsight}}</p>
-    <p><strong>151.申请人是否每年体检：</strong>{{person_if_healthexam}}</p>
-    <p><strong>152.配偶是否每年体检：</strong>{{person_if_spouse_healthexam}}</p>
+    <div>
+        <label class="control-label " for="person_name" style="font-size: 18px">三. 担保人信息</label>
+    </div>
 
-    <p><strong>153.申请人是否患有以下疾病(多选题)：</strong>{{user_disease}}</p>
-    <p><strong>154.配偶是否患有以下疾病(多选题)：</strong>{{spouse_disease}}</p>
-    <p><strong>155.申请人是否长期服用药物（请注明药物）：</strong>{{person_if_drug}}</p>
-    <p><strong>156.配偶是否长期服用药物（请注明药物）：</strong>{{spouse_if_drug}}</p>
-    <p><strong>157.申请人是否有过敏史（请注明过敏原）：</strong>{{person_if_allergy}}</p>
-    <p><strong>158.配偶是否有过敏史（请注明过敏原）：</strong>{{spouse_if_allergy}}</p>
+    <div>
+        <label class="control-label " for="person_name" style="font-size: 18px">(1)身份证信息</label>
+    </div>
 
-    <p><strong>159.申请人是否有大病经历：</strong>{{person_if_serious_ill}}</p>
-    <p><strong>160.疾病：</strong>{{person_ill}}  <strong>患病时间（XX年XX月）：</strong>{{person_ill_time}}</p>
-    <p><strong>161.配偶是否有大病经历：</strong>{{person_spouse_if_serious_ill}}</p>
-    <p><strong>162.疾病：</strong>{{spouse_ill}}  <strong>患病时间（XX年XX月）：</strong>{{spouse_ill_time}}</p>
-    <p><strong>163申请人是否有手术经历：</strong>{{person_if_surgery}}</p>
-    <p><strong>164.手术原因：</strong>{{person_surgery}}  <strong>手术时间（XX年XX月）：</strong>{{person_surgery_time}}</p>
-    <p><strong>165.配偶是否有手术经历：</strong>{{person_spouse_if_surgery}}</p>
-    <p><strong>166.手术原因：</strong>{{spouse_surgery}}  <strong>手术时间（XX年XX月）：</strong>{{spouse_surgery_time}}</p>
-    <p><strong>167.申请人是否吸烟：</strong>{{person_if_smoke}}</p>
-    <p><strong>168.申请人吸烟频率：</strong>{{person_smoke_frequency}}</p>
-    <p><strong>169.配偶是否吸烟：</strong>{{person_spouse_if_smoke}}</p>
-    <p><strong>170.配偶吸烟频率：</strong>{{person_spouse_smoke_frequency}}</p>
-    <p><strong>171.申请人是否饮酒：</strong>{{person_if_drink}}</p>
-    <p><strong>172.申请人饮酒情况：</strong>{{person_drink}}</p>
-    <p><strong>173.配偶是否饮酒：</strong>{{person_spouse_if_drink}}</p>
-    <p><strong>174.配偶饮酒情况：</strong>{{person_spouse_drink}}</p>
-    <p><strong>175.申请人是否经常在12点后入睡：</strong>{{person_if_staylate}}</p>
-    <p><strong>176.配偶是否经常在12点后入睡：</strong>{{person_spouse_if_staylate}}</p>
-    <p><strong>177.申请人是否经常失眠：</strong>{{person_if_insomnia}}</p>
-    <p><strong>178.配偶是否经常失眠：</strong>{{person_spouse_insomnia}}</p>
-    <p><strong>179.申请人是否经常在家吃饭：</strong>{{person_if_eatathome}}</p>
-    <p><strong>180.配偶是否经常在家吃饭：</strong>{{person_spouse_if_eatathome}}</p>
-    <p><strong>181.申请人每周锻炼次数：</strong>{{person_exercise_frequency}}</p>
-    <p><strong>182.配偶每周锻炼次数：</strong>{{person_spouse_exercise_frequency}}</p>
-    <p><strong>183.申请人是否持有健身房会员卡：</strong>{{person_if_exercise_membership}}</p>
-    <p><strong>184.配偶是否持有健身房会员卡：</strong>{{person_spouse_if_exercise_membership}}</p>
+    <table class="tg" style="table-layout: fixed; width: 100%">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <td class="tg-yw4l"><strong>62.担保人姓名：</strong>{{guarantor_name}}</td>
+            <td class="tg-yw4l"><strong>63.性别：</strong>{{guarantor_gender}}</td>
+            <td class="tg-yw4l"><strong>64.生日：</strong>{{guarantor_birthday}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>65.证件类型：</strong>{{guarantor_id_type}}</td>
+            <td class="tg-yw4l"><strong>66.证件号码：</strong>{{guarantor_id}}</td>
+            <td class="tg-yw4l"><strong>67.发证机关：</strong>{{guarantor_id_issuer}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>68.证件有效截止期间：</strong>{{guarantor_id_issuer_date}}</td>
+            <td class="tg-yw4l" colspan="2"><strong>69.家庭住址 (请具体到门牌号或者房间号)：</strong>{{guarantor_address}}</td>
+        </tr>
+    </table>
+
     <div class="form-group">
-        <label class="control-label" for="person_name" style="margin-top: 5%; font-size: 18px">第三部分.担保人信息</label>
+        <label class="control-label" for="person_name" style="font-size: 18px">(2)工资条信息</label>
     </div>
 
+    <table class="tg" style="table-layout: fixed; width: 100%">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <td class="tg-yw4l"><strong>70.担保人单位名称：</strong>{{guarantor_company}}</td>
+            <td class="tg-yw4l"><strong>71.每月收入：</strong>{{guarantor_income_month}}</td>
+            <td class="tg-yw4l"><strong>72.单位电话：</strong>{{guarantor_company_phone}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l" colspan="2"><strong>73.单位地址：</strong>{{guarantor_company_addr}}</td>
+            <td class="tg-yw4l"><strong>74.单位经济性质：</strong>{{guarantor_company_type}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>75.所属行业：</strong>{{guarantor_company_industry}}</td>
+            <td class="tg-yw4l"><strong>76.职业：</strong>{{guarantor_job}}</td>
+            <td class="tg-yw4l"><strong>77.职务：</strong>{{guarantor_post}}</td>
+        </tr>
+    </table>
+
     <div class="form-group">
-        <label class="control-label" for="person_name"
-               style="margin-top: 5%; font-size: 18px">紧急联系人信息(非申请人配偶/保证人)</label>
+        <label class="control-label" for="person_name" style="font-size: 18px">(3)补充信息</label>
     </div>
+
+    <table class="tg" style="table-layout: fixed; width: 100%">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <td class="tg-yw4l"><strong>78.担保人与申请人关系：</strong>{{guarantor_relationship}}</td>
+            <td class="tg-yw4l" colspan="2"><strong>79.与申请人首次认识时间（XX年XX月）：</strong>{{guarantor_first_meet}}</td>
+        </tr>
+    </table>
+
+    <div>
+        <label class="control-label " for="person_name" style="font-size: 18px">四. 紧急联系人信息</label>
+    </div>
+
+    <table class="tg" style="table-layout: fixed; width: 100%">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <td class="tg-yw4l"><strong>80.紧急联系人1：</strong>{{emergency1_name}}</td>
+            <td class="tg-yw4l"><strong>81.与申请人关系：</strong>{{emergency1_relationship}}</td>
+            <td class="tg-yw4l"><strong>82.手机号码：</strong>{{emergency1_contact}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>83.紧急联系人2：</strong>{{emergency2_name}}</td>
+            <td class="tg-yw4l"><strong>84.与申请人关系：</strong>{{emergency2_relationship}}</td>
+            <td class="tg-yw4l"><strong>85.手机号码：</strong>{{emergency2_contact}}</td>
+        </tr>
+    </table>
+
+    <div class="form-group">
+        <label class="control-label" for="person_name" style="margin-top: 5%; font-size: 20px">第二部分.教育信息</label>
+        <div>
+            <label class="control-label " for="person_name" style="font-size: 18px">一. 申请人教育信息</label>
+        </div>
+    </div>
+
+    <table class="tg" style="table-layout: fixed; width: 100%">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <td class="tg-yw4l"><strong>86.申请人教育信息</strong></td>
+            <td class="tg-yw4l"></td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>申请人小学校名</strong> {{applicant_primary_school}}</td>
+            <td class="tg-yw4l"><strong>申请人小学入学年份：</strong>{{applicant_primary_start}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>申请人初中校名：</strong>{{applicant_middle_school}}</td>
+            <td class="tg-yw4l"><strong>申请人初中入学年份：</strong>{{applicant_middle_start}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>申请人高中/中专校名：</strong>{{applicant_high_school}}</td>
+            <td class="tg-yw4l"><strong>申请人高中/中专入学年份：</strong>{{applicant_high_start}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>申请人大学校名：</strong>{{applicant_undergraduate}}</td>
+            <td class="tg-yw4l"><strong>申请人大学入学年份：</strong>{{applicant_undergraduate_start}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>申请人研究生校名：</strong>{{applicant_master}}</td>
+            <td class="tg-yw4l"><strong>申请人研究生入学年份：</strong>{{applicant_master_start}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+    </table>
+
+    <div>
+        <label class="control-label " for="person_name" style="font-size: 18px">二. 配偶教育信息</label>
+    </div>
+
+    <table class="tg" style="table-layout: fixed; width: 100%">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <td class="tg-yw4l"><strong>87.配偶教育信息</strong></td>
+            <td class="tg-yw4l"></td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>配偶小学校名：</strong>{{applicant_primary_school}}</td>
+            <td class="tg-yw4l"><strong>配偶小学入学年份：</strong>{{spouse_primary_start}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>配偶初中校名：</strong>{{spouse_middle_school}}</td>
+            <td class="tg-yw4l"><strong>配偶初中入学年份：</strong>{{spouse_middle_start}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>配偶高中/中专校名：</strong>{{spouse_high_school}}</td>
+            <td class="tg-yw4l"><strong>配偶高中/中专入学年份：</strong>{{spouse_high_start}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>配偶大学校名：</strong>{{spouse_undergraduate}}</td>
+            <td class="tg-yw4l"><strong>配偶大学入学年份：</strong>{{spouse_undergraduate_start}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>配偶研究生校名：</strong>{{spouse_master}}</td>
+            <td class="tg-yw4l"><strong>配偶研究生入学年份：</strong>{{spouse_master_start}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+    </table>
+
+    <div class="form-group">
+        <label class="control-label" for="person_name" style="margin-top: 5%; font-size: 20px">第三部分.工作信息</label>
+    </div>
+
+    <table class="tg" style=" table-layout: fixed; width: 100%">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <td class="tg-yw4l"><strong>88.申请人工作履历：</strong></td>
+            <td class="tg-yw4l"></td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>单位名称</strong> {{person_jobname_1}}</td>
+            <td class="tg-yw4l"><strong>所在省份城市</strong> {{person_jobplace_1}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>起始时间</strong> {{person_jobstart_1}}</td>
+            <td class="tg-yw4l"><strong>结束时间</strong> {{person_jobend_1}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>单位名称</strong> {{person_jobname_2}}</td>
+            <td class="tg-yw4l"><strong>所在省份城市</strong> {{person_jobplace_2}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>起始时间</strong> {{person_jobstart_2}}</td>
+            <td class="tg-yw4l"><strong>结束时间</strong> {{person_jobend_2}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>单位名称</strong> {{person_jobname_3}}</td>
+            <td class="tg-yw4l"><strong>所在省份城市</strong> {{person_jobplace_3}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>起始时间</strong> {{person_jobstart_3}}</td>
+            <td class="tg-yw4l"><strong>结束时间</strong> {{person_jobend_3}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>89.配偶工作履历：</strong></td>
+            <td class="tg-yw4l"></td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>单位名称</strong> {{spouse_jobname_1}}</td>
+            <td class="tg-yw4l"><strong>所在省份城市</strong> {{spouse_jobplace_1}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>起始时间</strong> {{spouse_jobstart_1}}</td>
+            <td class="tg-yw4l"><strong>结束时间</strong> {{spouse_jobend_1}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>单位名称</strong> {{spouse_jobname_2}}</td>
+            <td class="tg-yw4l"><strong>所在省份城市</strong> {{spouse_jobplace_2}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>起始时间</strong> {{spouse_jobstart_2}}</td>
+            <td class="tg-yw4l"><strong>结束时间</strong> {{spouse_jobend_2}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>单位名称</strong> {{spouse_jobname_3}}</td>
+            <td class="tg-yw4l"><strong>所在省份城市</strong> {{spouse_jobplace_3}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>起始时间</strong> {{spouse_jobstart_3}}</td>
+            <td class="tg-yw4l"><strong>结束时间</strong> {{spouse_jobend_3}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>90.申请人职称：</strong>{{applicant_title}}</td>
+            <td class="tg-yw4l"><strong>91.配偶职称：</strong>{{spouse_title}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>92.申请人从业资格证：</strong>{{applicant_certificate}}</td>
+            <td class="tg-yw4l"><strong>93.配偶从业资格证：</strong>{{spouse_certificate}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+    </table>
+
+    <div class="form-group">
+        <label class="control-label" for="person_name" style="margin-top: 5%; font-size: 20px">第四部分.家庭信息</label>
+    </div>
+
+    <table class="tg" style="table-layout: fixed; width: 100%">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <td class="tg-yw4l"><strong>94.家庭每月开支：</strong>{{family_expense}}</td>
+            <td class="tg-yw4l"><strong>95.家庭拥有住宅数量：</strong>{{family_house}}</td>
+            <td class="tg-yw4l"><strong>96.住宅状况：</strong>{{house_type}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>97.房贷每月还款：</strong>{{repayment}}</td>
+            <td class="tg-yw4l"><strong>98.每月房租：</strong>{{house_rent}}</td>
+            <td class="tg-yw4l"><strong>99.入住日期：</strong>{{check_in_date}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>100.子女学费总额（每年）：</strong>{{children_tuition}}</td>
+            <td class="tg-yw4l"><strong>101.子女是否患有以下疾病：</strong>{{child_disease}}</td>
+            <td class="tg-yw4l"><strong>102.是否与老人同住：</strong>{{live_with_parent}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>103.同住老人： 老人姓名</strong>{{parent_1_name}}</td>
+            <td class="tg-yw4l"><strong>出生日期</strong>{{parent_1_birthday}}</td>
+            <td class="tg-yw4l"><strong>与申请人关系</strong>{{parent_1_relation}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>老人姓名</strong>{{parent_2_name}}</td>
+            <td class="tg-yw4l"><strong>出生日期</strong>{{parent_2_birthday}}</td>
+            <td class="tg-yw4l"><strong>与申请人关系</strong>{{parent_2_relation}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>老人姓名</strong>{{parent_3_name}}</td>
+            <td class="tg-yw4l"><strong>出生日期</strong>{{parent_3_birthday}}</td>
+            <td class="tg-yw4l"><strong>与申请人关系</strong>{{parent_3_relation}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>104.老人是否患有以下疾病：</strong>{{parent_disease}}</td>
+            <td class="tg-yw4l"><strong>105.申请人是否持有护照：</strong>{{applicant_passport}}</td>
+            <td class="tg-yw4l"><strong>106.配偶是否持有护照：</strong>{{spouse_passport}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>107.申请人是否有出国/出境经历：</strong>{{applicant_go_abroad}}</td>
+            <td class="tg-yw4l"><strong>108.配偶是否有出国/出境经历：</strong>{{spouse_go_abroad}}</td>
+            <td class="tg-yw4l"><strong>109.申请人最近一次去过的国家：</strong>{{applicant_country}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>110.配偶最近一次去过的国家：</strong>{{spouse_country}}</td>
+            <td class="tg-yw4l"><strong>111.申请人是否有五险一金</strong>{{person_insurance}}</td>
+            <td class="tg-yw4l"><strong>112.配偶是否有五险一金</strong>{{spouse_insurance}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>113.申请人是否每周阅读纸质报纸：</strong>{{applicant_newspaper}}</td>
+            <td class="tg-yw4l"><strong>114.申请人每天查看并回复：</strong>{{person_read_reply}}</td>
+            <td class="tg-yw4l"><strong>115.申请人是否认识律师：</strong>{{applicant_lawyer}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>116.您所认识的律师姓名：</strong>{{layer_name}}</td>
+            <td class="tg-yw4l"><strong>您所认识的律师电话：</strong>{{layer_phone_num}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+    </table>
+
+    <div class="form-group">
+        <label class="control-label" for="person_name" style="margin-top: 5%; font-size: 20px">第五部分.金融信息</label>
+    </div>
+
+    <table class="tg" style="table-layout: fixed; width: 100%">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <td class="tg-yw4l"><strong>117.申请人年收入：</strong>{{applicant_income}}</td>
+            <td class="tg-yw4l"><strong>118.申请人固定收入/薪水是否超过总收入70%：</strong>{{person_inc_str}}</td>
+            <td class="tg-yw4l"><strong>119.配偶年收入：</strong>{{spouse_income}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>120.配偶固定收入/薪水是否超过总收入70%：</strong>{{person_spouse_inc_str}}</td>
+            <td class="tg-yw4l"><strong>121.申请人是否有股票等金融产品交易账户：</strong>{{person_if_finance}}</td>
+            <td class="tg-yw4l"><strong>122.申请人股票等金融产品投资总额：</strong>{{person_finance_invest}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>123.申请人持有储蓄卡的数量:</strong>{{person_num_debit}}</td>
+            <td class="tg-yw4l"><strong>124.申请人储蓄卡1：</strong>{{person_debit1_bank}}</td>
+            <td class="tg-yw4l"><strong>卡号：</strong>{{person_debit1_num}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>储蓄卡2：</strong>{{person_debit2_bank}}</td>
+            <td class="tg-yw4l"><strong>卡号：</strong>{{person_debit2_num}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>储蓄卡3：</strong>{{person_debit3_bank}}</td>
+            <td class="tg-yw4l"><strong>卡号：</strong>{{person_debit3_num}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>125.配偶持有储蓄卡的数量</strong>{{person_spouse_num_debit}}</td>
+            <td class="tg-yw4l"><strong>126.配偶储蓄卡1：</strong>{{spouse_debit1_bank}}</td>
+            <td class="tg-yw4l"><strong>卡号：</strong>{{spouse_debit1_num}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>储蓄卡2：</strong>{{spouse_debit2_bank}}</td>
+            <td class="tg-yw4l"><strong>卡号：</strong>{{spouse_debit2_num}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>储蓄卡3：</strong>{{spouse_debit3_bank}}</td>
+            <td class="tg-yw4l"><strong>卡号：</strong>{{spouse_debit3_num}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>127.申请人持有信用卡的数量</strong>{{person_num_credit}}</td>
+            <td class="tg-yw4l"><strong>128.申请人信用卡1：</strong>{{person_credit1_bank}}</td>
+            <td class="tg-yw4l"><strong>授信额度：</strong>{{person_credit1_num}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>信用卡2：</strong>{{person_credit2_bank}}</td>
+            <td class="tg-yw4l"><strong>授信额度：</strong>{{person_credit2_num}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>信用卡3：</strong>{{person_credit3_bank}}</td>
+            <td class="tg-yw4l"><strong>授信额度：</strong>{{person_credit3_num}}</td>
+            <td class="tg-yw4l"><strong>授信额度总计：</strong>{{person_credit_total}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>129.配偶持有信用卡的数量</strong>{{person_spouse_num_credit}}</td>
+            <td class="tg-yw4l"><strong>130.配偶信用卡1：</strong>{{spouse_credit1_bank}}</td>
+            <td class="tg-yw4l"><strong>授信额度：</strong>{{spouse_credit1_num}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>信用卡2：</strong>{{spouse_credit2_bank}}</td>
+            <td class="tg-yw4l"><strong>授信额度：</strong>{{spouse_credit2_num}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>信用卡3：</strong>{{spouse_credit3_bank}}</td>
+            <td class="tg-yw4l"><strong>授信额度：</strong>{{spouse_credit3_num}}</td>
+            <td class="tg-yw4l"><strong>授信额度总计：</strong>{{spouse_credit_total}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>131.是否有家庭贷款：</strong>{{person_if_loan}}</td>
+            <td class="tg-yw4l"><strong>132.家庭贷款总额：</strong>{{person_loan_amount}}</td>
+            <td class="tg-yw4l"><strong>133.家庭贷款类别：</strong>{{person_loan_type}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>134.申请人是否支付宝，微信支付等网络支付系统：</strong>{{person_if_epay}}</td>
+            <td class="tg-yw4l"><strong>135.配偶人是否支付宝，微信支付等网络支付系统：</strong>{{person_spouse_if_epay}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+    </table>
+
+    <div class="form-group">
+        <label class="control-label" for="person_name" style="margin-top: 5%; font-size: 20px">第六部分.车辆讯息(以下信息由经销商汽车金融专员填写)</label>
+    </div>
+
+    <table class="tg" style="table-layout: fixed; width: 100%">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <th class="tg-yw4l"><p><strong>136.汽车正面相片：</strong></p>
+                <img src="{{c.url get_car_front_image}}"></th>
+            <th class="tg-yw4l"><p><strong>137.汽车背面相片：</strong></p>
+                <img src="{{c.url get_car_back_image}}"></th>
+            <th class="tg-yw4l"></th>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>138.品牌：</strong>{{car_brand}}</td>
+            <td class="tg-yw4l"><strong>139.车型：</strong>{{motorcycle_type}}</td>
+            <td class="tg-yw4l"><strong>140.车辆价格：</strong>{{car_price}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>141.保险费：</strong>{{insurance_expense}}</td>
+            <td class="tg-yw4l"><strong>142.首付金额：</strong>{{down_payment}}</td>
+            <td class="tg-yw4l"><strong>143.首付比例：</strong>{{down_payment_percentage}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>144.融资金额：</strong>{{loan_value}}</td>
+            <td class="tg-yw4l"><strong>145.融资期限：</strong>{{loan_term}}</td>
+            <td class="tg-yw4l"><strong>146.车辆颜色：</strong>{{car_color}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>147.车架号：</strong>{{car_id}}</td>
+            <td class="tg-yw4l"><strong>148.发动机号：</strong>{{engine_num}}</td>
+            <td class="tg-yw4l"></td>
+        </tr>
+    </table>
+
+    <div class="form-group">
+        <label class="control-label" for="person_name" style="margin-top: 5%; font-size: 20px">第七部分.健康信息</label>
+    </div>
+
+
+    <table class="tg" style="table-layout: fixed; width: 100%">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <td class="tg-yw4l"><strong>149.申请人近视度数：</strong>{{person_shortsight}}</td>
+            <td class="tg-yw4l"><strong>150.配偶近视度数：</strong>{{person_spouse_shortsight}}</td>
+            <td class="tg-yw4l"><strong>151.申请人是否每年体检：</strong>{{person_if_healthexam}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>152.配偶是否每年体检：</strong>{{person_if_spouse_healthexam}}</td>
+            <td class="tg-yw4l"><strong>153.申请人是否患有以下疾病：</strong>{{user_disease}}</td>
+            <td class="tg-yw4l"><strong>154.配偶是否患有以下疾病：</strong>{{spouse_disease}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>155.申请人是否长期服用药物：</strong>{{person_if_drug}}</td>
+            <td class="tg-yw4l"><strong>156.配偶是否长期服用药物：</strong>{{spouse_if_drug}}</td>
+            <td class="tg-yw4l"><strong>157.申请人是否有过敏史：</strong>{{person_if_allergy}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>158.配偶是否有过敏史：</strong>{{spouse_if_allergy}}</td>
+            <td class="tg-yw4l"></td>
+            <td class="tg-yw4l"></td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>159.申请人是否有大病经历：</strong>{{person_if_serious_ill}}</td>
+            <td class="tg-yw4l"><strong>160.疾病：</strong>{{person_ill}}</td>
+            <td class="tg-yw4l"><strong>患病时间：</strong>{{person_ill_time}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>161.配偶是否有大病经历：</strong>{{person_spouse_if_serious_ill}}</td>
+            <td class="tg-yw4l"><strong>162.疾病：</strong>{{spouse_ill}}</td>
+            <td class="tg-yw4l"><strong>患病时间：</strong>{{spouse_ill_time}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>163申请人是否有手术经历：</strong>{{person_if_surgery}}</td>
+            <td class="tg-yw4l"><strong>164.手术原因：</strong>{{person_surgery}}</td>
+            <td class="tg-yw4l"><strong>手术时间：</strong>{{person_surgery_time}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>165.配偶是否有手术经历：</strong>{{person_spouse_if_surgery}}</td>
+            <td class="tg-yw4l"><strong>166.手术原因：</strong>{{spouse_surgery}}</td>
+            <td class="tg-yw4l"><strong>手术时间：</strong>{{spouse_surgery_time}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>167.申请人是否吸烟：</strong>{{person_if_smoke}}</td>
+            <td class="tg-yw4l"><strong>168.申请人吸烟频率：</strong>{{person_smoke_frequency}}</td>
+            <td class="tg-yw4l"><strong>169.配偶是否吸烟：</strong>{{person_spouse_if_smoke}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>170.配偶吸烟频率：</strong>{{person_spouse_smoke_frequency}}</td>
+            <td class="tg-yw4l"><strong>171.申请人是否饮酒：</strong>{{person_if_drink}}</td>
+            <td class="tg-yw4l"><strong>172.申请人饮酒情况：</strong>{{person_drink}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>173.配偶是否饮酒：</strong>{{person_spouse_if_drink}}</td>
+            <td class="tg-yw4l"><strong>174.配偶饮酒情况：</strong>{{person_spouse_drink}}</td>
+            <td class="tg-yw4l"><strong>175.申请人是否经常在12点后入睡：</strong>{{person_if_staylate}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>176.配偶是否经常在12点后入睡：</strong>{{person_spouse_if_staylate}}</td>
+            <td class="tg-yw4l"><strong>177.申请人是否经常失眠：</strong>{{person_if_insomnia}}</td>
+            <td class="tg-yw4l"><strong>178.配偶是否经常失眠：</strong>{{person_spouse_insomnia}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>179.申请人是否经常在家吃饭：</strong>{{person_if_eatathome}}</td>
+            <td class="tg-yw4l"><strong>180.配偶是否经常在家吃饭：</strong>{{person_spouse_if_eatathome}}</td>
+            <td class="tg-yw4l"><strong>181.申请人每周锻炼次数：</strong>{{person_exercise_frequency}}</td>
+        </tr>
+        <tr>
+            <td class="tg-yw4l"><strong>182.配偶每周锻炼次数：</strong>{{person_spouse_exercise_frequency}}</td>
+            <td class="tg-yw4l"><strong>183.申请人是否持有健身房会员卡：</strong>{{person_if_exercise_membership}}</td>
+            <td class="tg-yw4l"><strong>184.配偶是否持有健身房会员卡：</strong>{{person_spouse_if_exercise_membership}}</td>
+        </tr>
+    </table>
 
 
     <input type="submit" value="打印" class="print_btn btn btn-primary"/>

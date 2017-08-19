@@ -12,6 +12,7 @@ Template.login.events({
                         alert('密码错误');
                     } else {
                         alert('登陆成功');
+                        Router.go('/confirm')
                     }
                 });
             } else {

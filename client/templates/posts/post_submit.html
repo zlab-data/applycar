@@ -59,6 +59,7 @@
                 <select name="person_gender" id="person_gender" class="form-control">
                     <option value="男">男</option>
                     <option value="女">女</option>
+                    <option value="其他">其他</option>
                 </select>
             </div>
         </div>
@@ -195,6 +196,7 @@
                     <option value="未婚">未婚</option>
                     <option value="已婚">已婚</option>
                     <option value="离异">离异</option>
+                    <option value="丧偶">丧偶</option>
                 </select>
             </div>
         </div>
@@ -220,42 +222,52 @@
 
 
         <div class="form-group">
-            <label class="control-label" for="applicant_primary_school">22.子女资料</label>
-            <div class="controls" style="display: flex;">
-                <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>子女1：姓名</p></div>
-                <input name="child_1_name" id="child_1_name" type="text" value="" class="form-control"
-                       style="width: 20%"/>
-                <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>性别</p></div>
-                <input name="child_1_gender" id="child_1_gender" type="text" value="" class="form-control"
-                       style="width: 10%"/>
-                <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>出生日期</p></div>
-                <input name="child_1_birthday" id="child_1_birthday" type="date" value="" class="form-control"
-                       style="width: 20%"/>
-            </div>
+            <label class="control-label" for="applicant_primary_school" style="width: 100%">22.子女资料
+                <div class="controls" style="display: flex;">
+                    <div style="padding-left: 25px; padding-top: 8px; width:15%"><p>子女1：姓名</p></div>
+                    <input name="child_1_name" id="child_1_name" type="text" value="" class="form-control"
+                           style="width: 20%"/>
+                    <div style="padding-left: 25px; padding-top: 8px; width:10%"><p>性别</p></div>
+                    <select name="child_1_gender" id="child_1_gender" class="form-control" style="width: 10%">
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                        <option value="其他">其他</option>
+                    </select>
+                    <div style="padding-left: 25px; padding-top: 8px; width:10%"><p>出生日期</p></div>
+                    <input name="child_1_birthday" id="child_1_birthday" type="date" value="" class="form-control"
+                           style="width: 20%"/>
+                </div>
 
-            <div class="controls" style="display: flex;">
-                <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>子女2：姓名</p></div>
-                <input name="child_2_name" id="child_2_name" type="text" value="" class="form-control"
-                       style="width: 20%"/>
-                <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>性别</p></div>
-                <input name="child_2_gender" id="child_2_gender" type="text" value="" class="form-control"
-                       style="width: 10%"/>
-                <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>出生日期</p></div>
-                <input name="child_2_birthday" id="child_2_birthday" type="date" value="" class="form-control"
-                       style="width: 20%"/>
-            </div>
-            <div class="controls" style="display: flex;">
-                <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>子女3：姓名</p></div>
-                <input name="child_3_name" id="child_3_name" type="text" value="" class="form-control"
-                       style="width: 20%"/>
-                <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>性别</p></div>
-                <input name="child_3_gender" id="child_3_gender" type="text" value="" class="form-control"
-                       style="width: 10%"/>
-                <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>出生日期</p></div>
-                <input name="child_3_birthday" id="child_3_birthday" type="date" value="" class="form-control"
-                       style="width: 20%"/>
-            </div>
+                <div class="controls" style="display: flex;">
+                    <div style="padding-left: 25px; padding-top: 8px; width:15%"><p>子女2：姓名</p></div>
+                    <input name="child_2_name" id="child_2_name" type="text" value="" class="form-control"
+                           style="width: 20%"/>
+                    <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>性别</p></div>
+                    <select name="child_2_gender" id="child_2_gender" class="form-control" style="width: 10%">
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                        <option value="其他">其他</option>
+                    </select>
+                    <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>出生日期</p></div>
+                    <input name="child_2_birthday" id="child_2_birthday" type="date" value="" class="form-control"
+                           style="width: 20%"/>
+                </div>
 
+                <div class="controls" style="display: flex;">
+                    <div style="padding-left: 25px; padding-top: 8px; width:15%"><p>子女3：姓名</p></div>
+                    <input name="child_3_name" id="child_3_name" type="text" value="" class="form-control"
+                           style="width: 20%"/>
+                    <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>性别</p></div>
+                    <select name="child_3_gender" id="child_3_gender" class="form-control" style="width: 10%">
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                        <option value="其他">其他</option>
+                    </select>
+                    <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>出生日期</p></div>
+                    <input name="child_3_birthday" id="child_3_birthday" type="date" value="" class="form-control"
+                           style="width: 20%"/>
+                </div>
+            </label>
         </div>
 
         <div class="form-group">
@@ -1261,7 +1273,7 @@
                 <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>出生日期</p></div>
                 <input name="parent_1_birthday" id="parent_1_birthday" type="date" value="" class="form-control"
                        style="width: 20%"/>
-                <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>與申請人關係</p></div>
+                <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>与申请人关系</p></div>
                 <input name="parent_1_relation" id="parent_1_relation" type="text" value="" class="form-control"
                        style="width: 20%"/>
             </div>
@@ -1273,7 +1285,7 @@
                 <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>出生日期</p></div>
                 <input name="parent_2_birthday" id="parent_2_birthday" type="date" value="" class="form-control"
                        style="width: 20%"/>
-                <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>與申請人關係</p></div>
+                <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>与申请人关系</p></div>
                 <input name="parent_2_relation" id="parent_2_relation" type="text" value="" class="form-control"
                        style="width: 20%"/>
             </div>
@@ -1284,7 +1296,7 @@
                 <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>出生日期</p></div>
                 <input name="parent_3_birthday" id="parent_3_birthday" type="date" value="" class="form-control"
                        style="width: 20%"/>
-                <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>與申請人關係</p></div>
+                <div style="padding-left: 25px; padding-top: 8px;width:10%"><p>与申请人关系</p></div>
                 <input name="parent_3_relation" id="parent_3_relation" type="text" value="" class="form-control"
                        style="width: 20%"/>
             </div>

@@ -3,4 +3,8 @@ Template.confirm.events({
         Meteor.logout();
         Router.go('/');
     },
+
+    'click .agree': function () {
+        Router.go('/');
+    }
 });
